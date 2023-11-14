@@ -162,8 +162,8 @@ INSERT INTO Classement (annee, position, idClub) VALUES
 ('2022', 2, 2),
 ('2022', 3, 3),
 ('2022', 4, 4),
-('2022', 7, 7),
-('2022', 7, 7),
+('2022', 5, 5),
+('2022', 6, 6),
 ('2022', 7, 7),
 ('2022', 8, 8),
 ('2022', 9, 9),
@@ -190,7 +190,7 @@ INSERT INTO Obtenir (idClub, nombre, idTrophee) VALUES
 (1, 33, 11), -- Bundesliga
 (1, 20, 12), -- DFB Pokal
 (1, 2, 19), -- Super Coupe UEFA
-(1, 11, 13), -- Super Cup Allemande
+(1, 10, 9), -- Super Cup (Community Shield)
 (1, 2, 20), -- FIFA Club World Cup (CM Clubs)
 (1, 3, 21), -- Audi Cup
 
@@ -199,8 +199,9 @@ INSERT INTO Obtenir (idClub, nombre, idTrophee) VALUES
 (2, 3, 18), -- UEFA Europa League
 (2, 19, 7), -- Premier League
 (2, 8, 8), -- FA Cup
-(2, 9, 9), -- League Cup 
-(2, 17, 10), -- Community Shield (Angleterre)
+(2, 4, 5), -- League Championship
+(2, 9, 6), -- League Cup
+(2, 16, 10), -- Community Shield (Angleterre)
 (2, 4, 19), -- Super Coupe UEFA
 (2, 1, 20), -- Cdm club
 (2, 1, 22), -- Premier League asia trophy
@@ -209,17 +210,18 @@ INSERT INTO Obtenir (idClub, nombre, idTrophee) VALUES
 (3, 1, 17), -- Ligue des Champions
 (3, 9, 7), -- Premier League
 (3, 7, 8), -- FA Cup
+(3, 7, 6), -- League Championship
 (3, 8, 9), -- League Cup
 (3, 6, 10), -- Community Shield (Angleterre)
 
--- Real Madrid 
+-- Man City
 (4, 14, 17), -- Ligue des Champions
 (4, 2, 18), -- UEFA Europa League
 (4, 35, 14), -- Liga
-(4, 20, 17), -- Coupe du Roi
-(4, 12, 17), -- Supercopa de España
-(4, 5, 19), -- Super Coupe UEFA
-(4, 8, 20), -- CM Clubs
+(4, 20, 15), -- Coupe du Roi
+(4, 10, 16), -- Supercopa de España
+(4, 4, 19), -- Super Coupe UEFA
+(4, 5, 20), -- CM Clubs
 (4, 1, 23), -- International Champions Cup
 
 -- Chelsea
@@ -227,7 +229,8 @@ INSERT INTO Obtenir (idClub, nombre, idTrophee) VALUES
 (5, 2, 18), -- UEFA Europa League
 (5, 6, 7), -- Premier League
 (5, 8, 8), -- FA Cup
-(5, 5, 7), -- League Cup
+(5, 2, 5), -- League Championship
+(5, 5, 6), -- League Cup
 (5, 4, 10), -- Community Shield (Angleterre)
 (5, 2, 19), -- Super Coupe UEFA
 (5, 1, 20), -- CM Clubs
@@ -235,8 +238,8 @@ INSERT INTO Obtenir (idClub, nombre, idTrophee) VALUES
 -- FC Barcelone
 (6, 5, 17), -- Ligue des Champions
 (6, 27, 14), -- Liga
-(6, 31, 17), -- Coupe du Roi
-(6, 14, 17), -- Supercopa de España
+(6, 31, 15), -- Coupe du Roi
+(6, 14, 16), -- Supercopa de España
 (6, 5, 19), -- Super Coupe UEFA
 (6, 3, 20), -- CM Clubs
 (6, 1, 21), -- Audi Cup
@@ -252,18 +255,16 @@ INSERT INTO Obtenir (idClub, nombre, idTrophee) VALUES
 -- Juventus
 (8, 2, 17), -- UEFA Champions League
 (8, 3, 18), -- UEFA Europa League
-(8, 9, 7), -- Supercoppa Italiana
+(8, 9, 6), -- Supercoppa Italiana
 (8, 36, 4), -- Serie A
-(8, 14, 7), -- Coppa Italia
-(8, 1, 19), -- Super Coupe de luefa 
-(8, 1, 12),
+(8, 14, 5), -- Coppa Italia
 
 -- Atlético Madrid
 (9, 3, 18), -- UEFA Europa League
 (9, 11, 14), -- La Liga
-(9, 10, 17), -- Copa del Rey
+(9, 10, 15), -- Copa del Rey
 (9, 1, 17), -- UEFA Champions League
-(9, 4, 17), -- Supercopa de España
+(9, 4, 16), -- Supercopa de España
 (9, 3, 19), -- UEFA Super Cup
 (9, 1, 21), -- Audi Cup
 
@@ -273,17 +274,17 @@ INSERT INTO Obtenir (idClub, nombre, idTrophee) VALUES
 (10, 20, 7), -- Premier League
 (10, 12, 8), -- FA Cup
 (10, 2, 13), -- DFL-Supercup
-(10, 7, 9), -- League Cup
+(10, 6, 9), -- League Cup
 (10, 21, 10), -- Community Shield (Angleterre)
 (10, 1, 19), -- UEFA Super Cup
 (10, 1, 20), -- FIFA Club World Cup
 (10, 1, 23), -- International Champions Cup
 
 -- AS Roma
-(11, 1, 27), -- UEFA Europa Conference League
-(11, 2, 7), -- Supercoppa Italiana
+(11, 1, 25), -- UEFA Europa Conference League
+(11, 2, 6), -- Supercoppa Italiana
 (11, 3, 4), -- Serie A
-(11, 9, 7), -- Coppa Italia
+(11, 9, 5), -- Coppa Italia
 (11, 1, 12); -- Serie B
      
 INSERT INTO Joueur (nom, prenom, photo, poste, idClub)
