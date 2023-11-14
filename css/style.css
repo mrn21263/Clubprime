@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Inter", sans-serif;
+    overflow-x: hidden;
+    scroll-snap-type: y  mandatory; 
+  }
+  body {
+    width: 100vw;
+    background-color: #131313;
+  }
+  
+  body::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    background-color: transparent;
+  }
+  
+  .responsive {
+    color: white;
+    width: 75%;
+    opacity: 0;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 0;
+    scrollbar-width: none;
+  
+  }
+  ::-webkit-scrollbar-thumb {
+    background: transparent;
+  }
+  
