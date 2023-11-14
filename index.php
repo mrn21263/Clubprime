@@ -29,7 +29,22 @@
         </div>
     </div>
     <div class="podium">
+        <div class="date">
         
+        </div>
+        <div class="place">
+            <div class="ranked">
+                <div class="deux">
+                    
+                </div>
+                <div class="un">
+
+                </div>
+                <div class="trois">
+
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>

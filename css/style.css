@@ -61,7 +61,7 @@
 
   .navbar nav a {
     color: #FFF;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 500;
     transition: 0.2s;
     padding-left: 70px;
@@ -112,7 +112,7 @@
     border-radius: 50px;
     background-color: #120499;
     color: white;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 700;
     transition: 0.3s;
 }
@@ -132,4 +132,46 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+  }
+
+  .podium .date{
+    height: 20svh;
+    width: 100vw;
+    background-color: pink;
+  }
+
+  .podium .place{
+    height: 80svh;
+    width: 100vw;
+    background-color: blueviolet;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  .ranked{
+    height: 80%;
+    width: 50%;
+    background-color: red;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+  }
+
+  .deux, .un, .trois{
+    width: 30%;
+    background-color: beige;
+  }
+
+  .deux{
+    height: 30svh;
+  }
+
+  .un{
+    height: 50svh;
+  }
+
+  .trois{
+    height: 10svh;
   }
