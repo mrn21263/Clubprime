@@ -9,3 +9,10 @@
     <h1>trait_exists</h1>
 </body>
 </html>
+
+
+    <?php
+        $imageData = $produit['photo'];
+        $imageSrc = 'data:image/jpeg;base64,' . base64_encode($imageData);
+    ?>
+    <img src="<?php echo $imageSrc; ?>" alt="Photo du produit">
