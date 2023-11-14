@@ -19,7 +19,6 @@ CREATE TABLE IF NOT EXISTS Club (
     photoStade BLOB,
     entraineur VARCHAR(277),
     photoEntraineur BLOB,
-    photoEquipe BLOB,
     FOREIGN KEY (idLigue) REFERENCES Ligue(id)
 );
 
@@ -52,8 +51,8 @@ CREATE TABLE IF NOT EXISTS Joueur (
 -- Création de la table Trophee
 CREATE TABLE IF NOT EXISTS Trophee (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    nom VARCHAR(277) NOT NULL
-    photoTrophee BLOB,
+    nom VARCHAR(277) NOT NULL,
+    photoTrophee BLOB
 );
 
 -- Création de la table Classement
@@ -92,13 +91,13 @@ CREATE TABLE IF NOT EXISTS Taguer (
 
 -- Création de la table Logo
 CREATE TABLE IF NOT EXISTS Logo (
-   dateCreat DATE,
-   nom VARCHAR(277) NOT NULL,
+   annee int,
    idClub INT,
+   periode varchar(255),
+   photoLogo BLOB,
    FOREIGN KEY (idClub) REFERENCES Club(id),
-   PRIMARY KEY (dateCreat, idClub)
+   PRIMARY KEY (annee, idClub)
 );
-
 -- Insertion de données dans la table Pays
 INSERT INTO Pays (nom) VALUES
 ('Allemagne'),
@@ -113,14 +112,14 @@ INSERT INTO Ligue (nom, idPays, photoLigue) VALUES
 ('Premier League', 2,"C:\Users\sdasilva\Desktop\logo\premierleague.png"),
 ('La Liga', 3,"C:\Users\sdasilva\Desktop\logo\laliga"),
 ('Ligue 1', 4,"C:\Users\sdasilva\Desktop\logo\ligue1"),
-('Serie A', 5),"C:\Users\sdasilva\Desktop\logo\seriaA";
+('Serie A', 5,"C:\Users\sdasilva\Desktop\logo\seriaA");
 
 -- Insertion de données dans la table Club
-INSERT INTO Club (nom, stade, descr, dateCrea, idLigue, descrStade, photoStade, entraineur, photoEntraineur, photoEquipe) VALUES
-('Bayern', 'Allianz Arena', 'Club de football basé à Munich, Allemagne', '1900-02-27', 1, "L'Allianz Arena ou Fußball Arena München, surnommée le « Schlauchboot » en raison de son aspect, est un stade de football situé au nord de Munich, la capitale du Land de Bavière en Allemagne. Le stade a une capacité de 75 000 spectateurs pour les matchs de Bundesliga, et 70 000 places en configuration internationale.", "E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Bayern\Stade.jpg" ,"Thomas Tuchel", "E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Bayern\Entraineur.jpg","" ),
+INSERT INTO Club (nom, stade, descr, dateCrea, idLigue, descrStade, photoStade, entraineur, photoEntraineur) VALUES
+('Bayern', 'Allianz Arena', 'Club de football basé à Munich, Allemagne', '1900-02-27', 1, "L'Allianz Arena ou Fußball Arena München, surnommée le « Schlauchboot » en raison de son aspect, est un stade de football situé au nord de Munich, la capitale du Land de Bavière en Allemagne. Le stade a une capacité de 75 000 spectateurs pour les matchs de Bundesliga, et 70 000 places en configuration internationale.", "E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Bayern\Stade.jpg" ,"Thomas Tuchel", "E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Bayern\Entraineur.jpg"),
 ('Liverpool', 'Anfield', 'Club de football historique de la Premier League anglaise', '1892-03-17', 2, "Anfield, situé à Liverpool, est un stade de football légendaire, surnommé le « Théâtre des rêves rouges ». Construit au nord de la ville, il est le sanctuaire du Liverpool Football Club. Doté d'une atmosphère électrique, Anfield offre une capacité de 53 394 places en configuration de matchs de la Premier League. Le stade emblématique a été le témoin de moments historiques du football, de chants passionnés et de célébrations inoubliables.","E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Liverpool\Stade.jpg" ,"Jürgen Klopp", "E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Liverpool\Entraineur.jpg"),
 ('Man City', 'Etihad Stadium', 'Club de football de Manchester jouant en Premier League', '1880-04-16', 2, "L'Etihad Stadium, niché à Manchester, est le foyer éclatant du Manchester City FC. Surnommé le City of Manchester Stadium, il se dresse fièrement au cœur de l'action. Avec une capacité de plus de 53 000 places, ce stade moderne est le théâtre de performances époustouflantes de l'équipe des Ciel et Blanc, illuminant les rêves des supporters.", "E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Man City\Stade.jpg" ,"Pep Guardiola", "E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Man City\Entraineur.jpg" ),
-('Real Madrid', 'Santiago Bernabéu', 'Club de football espagnol de la ville de Madrid', '1902-03-06', 3; "Le Santiago Bernabéu, légende du football basé à Madrid, est le temple sacré du Real Madrid. Renommé pour son histoire glorieuse, il peut accueillir plus de 80 000 fans passionnés. Ce stade emblématique est imprégné d'une atmosphère magique lors des matchs, offrant une expérience incomparable aux aficionados madrilènes.", "E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Real Madrid\Stade.webp" ,"Carlo Ancelotti", "E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Real Madrid\Entraineur.jpg"),
+('Real Madrid', 'Santiago Bernabéu', 'Club de football espagnol de la ville de Madrid', '1902-03-06', 3, "Le Santiago Bernabéu, légende du football basé à Madrid, est le temple sacré du Real Madrid. Renommé pour son histoire glorieuse, il peut accueillir plus de 80 000 fans passionnés. Ce stade emblématique est imprégné d'une atmosphère magique lors des matchs, offrant une expérience incomparable aux aficionados madrilènes.", "E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Real Madrid\Stade.webp" ,"Carlo Ancelotti", "E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Real Madrid\Entraineur.jpg"),
 ('Chelsea', 'Stamford Bridge', 'Club de football londonien de Premier League', '1905-03-10', 2, "Stamford Bridge, résidence du Chelsea FC, se dresse avec élégance à Londres. Avec une capacité de plus de 40 000 sièges, ce stade empreint de tradition est le lieu où les Blues de Chelsea forgent leur histoire. L'atmosphère vibrante de Stamford Bridge fait de chaque match une aventure captivante.", "E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Chelsea\Stade.jpg" ,"Mauricio Pochettino", "E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Chelsea\Entraineur.jpg"),
 ('Barcelone', 'Camp Nou', 'Club de football de Barcelone un des plus reconnus au monde', '1899-11-29', 3, "Le Camp Nou, situé à Barcelone, est le géant catalan où le FC Barcelone écrit son histoire. Avec une capacité de plus de 99 000 spectateurs, il est le plus grand stade d'Europe. L'ambiance électrique, et les prouesses de génies du ballon rond font du Camp Nou un lieu mythique.", "E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Barcelone\Stade.jpg" ,"Xavi Hernández", "E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Barcelone\Entraineur.jpg"),
 ('PSG', 'Parc des Princes', 'Club de football français basé à Paris', '1970-08-12', 4, "Le Parc des Princes, joyau parisien, est l'antre du Paris Saint-Germain. Avec une capacité de plus de 48 000 places, ce stade moderne vibre au rythme des exploits des stars du PSG. L'élégance et le dynamisme du Parc des Princes en font un lieu emblématique du football français.", "E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\PSG\Stade.jpg" ,"Luis Enrique", "E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\PSG\Entraineur.jpg"),
@@ -387,7 +386,6 @@ VALUES
   ('Marquinhos', '', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\PSG\M.webp', 'D', 7),
   ('Hakimi', 'Achraf', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\PSG\AH.webp', 'D', 7),
   ('Donnarumma', 'Gianluigi', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\PSG\GD.webp', 'G', 7);
-q
 
 
 INSERT INTO Joueur (nom, prenom, photo, poste, idClub)
@@ -401,7 +399,7 @@ VALUES
     ('Danilo', NULL, 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Juventus\PD.webp', 'D', 8),
     ('Bremer', 'Gleison', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Juventus\GBSN.webp', 'D', 8),
     ('Gatti', 'Federico', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Juventus\FG.webp', 'D', 8),
-    ('Vlahović', 'Dušan', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Juventus\DV.webp', 'AT', 8),
+    ('Vlahović', 'Dušan', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Juventus\DV.webp', 'AT', 8);
 
 
 INSERT INTO Joueur (nom, prenom, photo, poste, idClub)
