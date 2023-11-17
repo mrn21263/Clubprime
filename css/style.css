@@ -29,7 +29,7 @@
 
 
   .accueil{
-    background-image: url(../ressources/imagespage1/Landing-page.png);
+    background-image: url(../ressources/accueil/Landing-page.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -129,7 +129,7 @@
   .podium{
     height: 100svh;
     width: 100vw;
-    background-image: url(../ressources/imagespage1/imageequipe/mancity.png);
+    background-image: url(../ressources/FondEcranEquipe/ManCity.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -220,7 +220,7 @@
   .coupe1{
     height: 20svh;
     width: 100%;
-    background-image: url(../ressources/trophee/tropheeblanc1.png);
+    background-image: url(../ressources/accueil/tropheeblanc1.png);
     background-repeat: no-repeat;
     background-position: center;
     display: flex;
@@ -240,7 +240,7 @@
   .coupe2{
     height: 15svh;
     width: 100%;
-    background-image: url(../ressources/trophee/trophee2.png);
+    background-image: url(../ressources/accueil/trophee2.png);
     background-repeat: no-repeat;
     background-position: center;
     display: flex;
@@ -260,7 +260,7 @@
   .coupe3{
     height: 11svh;
     width: 100%;
-    background-image: url(../ressources/trophee/tropheeblanc3.png);
+    background-image: url(../ressources/accueil/tropheeblanc3.png);
     background-repeat: no-repeat;
     background-position: center;
     display: flex;
@@ -300,7 +300,7 @@
   }
 
   .general2:hover .podium{
-    background-image: url(../ressources/imagespage1/imageequipe/bayernmunich.png);
+    background-image: url(../ressources/LogoEquipe/Bayern/2002–2017.png);
   }
 
   .general3{
