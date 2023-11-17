@@ -128,7 +128,7 @@
   .podium{
     height: 100svh;
     width: 100vw;
-    background-image: url(../ressources/imagespage1/mancity.png);
+    background-image: url(../ressources/imagespage1/imageequipe/mancity.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -137,13 +137,11 @@
   .podium .date{
     height: 20svh;
     width: 100vw;
-    background-color: pink;
   }
 
   .podium .place{
     height: 80svh;
-    width: 100vw;
-    background-color: blueviolet;
+    width: 100vw; 
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -152,7 +150,6 @@
   .ranked{
     height: 80%;
     width: 50%;
-    background-color: red;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -164,14 +161,105 @@
     background-color: beige;
   }
 
-  .deux{
-    height: 30svh;
-  }
-
+  
   .un{
     height: 50svh;
+    background-color: #080053;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #FFF;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+  }
+
+  .deux{
+    height: 30svh;
+    background-color: #080053;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #FFF;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
   }
 
   .trois{
-    height: 10svh;
+    height: 20svh;
+    background-color: #080053;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #FFF;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+  }
+
+  .coupe1{
+    height: 20svh;
+    width: 100%;
+    background-image: url(../ressources/trophee/tropheeblanc1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #080053;
+    font-size: 68px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-top: 10%;
+  }
+
+  .coupe1 p{
+    margin-bottom: 20%;
+  }
+
+  .coupe2{
+    height: 15svh;
+    width: 100%;
+    background-image: url(../ressources/trophee/trophee2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #080053;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-top: 5%;
+  }
+
+  .coupe2 p{
+    margin-bottom: 15%;
+  }
+
+  .coupe3{
+    height: 11svh;
+    width: 100%;
+    background-image: url(../ressources/trophee/tropheeblanc3.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #080053;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    
+  }
+
+  .coupe3 p{
+    margin-bottom: 10%;
   }

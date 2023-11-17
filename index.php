@@ -12,7 +12,7 @@
 <body>
     <div class="accueil">
         <div class="navbar">
-        <img class="logo" src="./ressources/imagespage1/Background.png" alt="Logo">
+        <img class="logo" src="./ressources/imagespage1/logo.png" alt="Logo">
             <nav>
                 <a class="acc" href="#">Accueil</a>
                 <a href="#">Podium</a>
@@ -35,16 +35,32 @@
         <div class="place">
             <div class="ranked">
                 <div class="deux">
-                    
+                    <p>Bayern Munich</p>
+                    <div class="coupe2">
+                        <p>2</p>
+                    </div>
                 </div>
                 <div class="un">
-
+                    <p>Manchester City</p>
+                    <div class="coupe1">
+                        <p>1</p>
+                    </div>
                 </div>
                 <div class="trois">
-
+                    <p>Real Madrid</p>
+                    <div class="coupe3">
+                        <p>3</p>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
+    <div class="test">
+        <style>
+        .test{
+            height:100vh;
+        }
+        </style>
     </div>
 </body>
 </html>
