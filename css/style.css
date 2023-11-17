@@ -6,6 +6,7 @@
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
     scroll-snap-type: y  mandatory; 
+    scroll-behavior: smooth;
   }
 
   body::-webkit-scrollbar {
@@ -128,19 +129,33 @@
   .podium{
     height: 100svh;
     width: 100vw;
-    background-image: url(../ressources/imagespage1/imageequipe/mancity.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
   }
 
   .podium .date{
-    height: 20svh;
+    height: 10svh;
     width: 100vw;
+    display: flex;
+    align-items: end;
   }
 
+  .date select{
+    width: 150px; 
+    height: 40px; 
+    font-weight: 700; 
+    font-size: 15px; 
+    text-align: center; 
+    color: #000000; 
+    border: 2px solid #000000; 
+    border-radius: 40px;
+    margin-left: 100px;
+    background-color: transparent;
+    }
+
   .podium .place{
-    height: 80svh;
+    height: 90svh;
     width: 100vw; 
     display: flex;
     justify-content: center;
@@ -156,14 +171,9 @@
 
   }
 
-  .deux, .un, .trois{
-    width: 30%;
-    background-color: beige;
-  }
-
-  
   .un{
     height: 50svh;
+    width: 100%;
     background-color: #080053;
     color: white;
     display: flex;
@@ -178,6 +188,7 @@
 
   .deux{
     height: 30svh;
+    width: 100%;
     background-color: #080053;
     color: white;
     display: flex;
@@ -192,6 +203,7 @@
 
   .trois{
     height: 20svh;
+    width: 100%;
     background-color: #080053;
     color: white;
     display: flex;
@@ -262,4 +274,41 @@
 
   .coupe3 p{
     margin-bottom: 10%;
+  }
+
+  .general{
+    height: 50svh;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  .general2{
+    height: 70svh;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  .general2:hover .podium{
+    background-image: url(../ressources/imagespage1/imageequipe/bayernmunich.png);
+  }
+
+  .general3{
+    height: 43svh;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    cursor: pointer;
   }
