@@ -129,6 +129,7 @@
   .podium{
     height: 100svh;
     width: 100vw;
+    background-image: url(../ressources/imagespage1/imageequipe/mancity.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
