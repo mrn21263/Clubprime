@@ -290,44 +290,47 @@ INSERT INTO Obtenir (idClub, nombre, idTrophee) VALUES
      
 INSERT INTO Joueur (nom, prenom, photo, poste, idClub)
 VALUES
-  ('Ulreich', 'Sven', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Bayern\SU.webp', 'G', 1),
-  ('Davies', 'Alphonso', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Bayern\AD.webp', 'D', 1),
-  ('Kim', 'Min-Jae', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Bayern\MJK.webp', 'D', 1),
-  ('Upamecano', 'Dayot', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Bayern\DU.webp', 'D', 1),
-  ('Mazraoui', 'Noussair', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Bayern\MN.webp', 'D', 1),
-  ('Kimmich', 'Joshua', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Bayern\JK.webp', 'M', 1),
-  ('Goretzka', 'Leon', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Bayern\LG.webp', 'M', 1),
-  ('Coman', 'Kingsley', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Bayern\KC.webp', 'AT', 1),
-  ('Musiala', 'Jamal', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Bayern\JM.webp', 'M', 1),
-  ('Sané', 'Leroy', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Bayern\LS.webp', 'AT', 1),
-  ('Kane', 'Harry', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Bayern\HK.webp', 'AT', 1);
+  ('Ulreich', 'Sven', 'ressources/PhotoJoueur/Bayern/SU.webp', 'G', 1),
+  ('Davies', 'Alphonso', 'ressources/PhotoJoueur/Bayern/AD.webp', 'D', 1),
+  ('Kim', 'Min-Jae', 'ressources/PhotoJoueur/Bayern/MJK.webp', 'D', 1),
+  ('Upamecano', 'Dayot', 'ressources/PhotoJoueur/Bayern/DU.webp', 'D', 1),
+  ('Mazraoui', 'Noussair', 'ressources/PhotoJoueur/Bayern/MN.webp', 'D', 1),
+  ('Kimmich', 'Joshua', 'ressources/PhotoJoueur/Bayern/JK.webp', 'M', 1),
+  ('Goretzka', 'Leon', 'ressources/PhotoJoueur/Bayern/LG.webp', 'M', 1),
+  ('Coman', 'Kingsley', 'ressources/PhotoJoueur/Bayern/KC.webp', 'AT', 1),
+  ('Musiala', 'Jamal', 'ressources/PhotoJoueur/Bayern/JM.webp', 'M', 1),
+  ('Sané', 'Leroy', 'ressources/PhotoJoueur/Bayern/LS.webp', 'AT', 1),
+  ('Kane', 'Harry', 'ressources/PhotoJoueur/Bayern/HK.webp', 'AT', 1);
+
 
 INSERT INTO Joueur (nom, prenom, photo, poste, idClub)
 VALUES
-  ('Díaz', 'Luis', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Liverpool\LD.webp', 'AT', 2),
-  ('Núñez', 'Darwin', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Liverpool\DN.webp', 'AT', 2),
-  ('Salah', 'Mohamed', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Liverpool\MS.webp', 'AT', 2),
-  ('Jones', 'Curtis', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Liverpool\CJ.webp', 'M', 2),
-  ('Mac Allister', 'Alexis', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Liverpool\AM.webp', 'M', 2),
-  ('Szoboszlai', 'Dominik', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Liverpool\DS.webp', 'M', 2),
-  ('Robertson', 'Andrew', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Liverpool\AR.webp', 'D', 2),
-  ('van Dijk', 'Virgil', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Liverpool\VV.webp', 'D', 2),
-  ('Matip', 'Joel', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Liverpool\JM.webp', 'D', 2),
-  ('Alexander-Arnold', 'Trent', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Liverpool\TA.webp', 'D', 2),
-  ('Becker', 'Alisson', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Liverpool\AB.webp', 'G', 2);
+  ('Díaz', 'Luis', 'ressources/PhotoJoueur/Liverpool/LD.webp', 'AT', 2),
+  ('Núñez', 'Darwin', 'ressources/PhotoJoueur/Liverpool/DN.webp', 'AT', 2),
+  ('Salah', 'Mohamed', 'ressources/PhotoJoueur/Liverpool/MS.webp', 'AT', 2),
+  ('Jones', 'Curtis', 'ressources/PhotoJoueur/Liverpool/CJ.webp', 'M', 2),
+  ('Mac Allister', 'Alexis', 'ressources/PhotoJoueur/Liverpool/AM.webp', 'M', 2),
+  ('Szoboszlai', 'Dominik', 'ressources/PhotoJoueur/Liverpool/DS.webp', 'M', 2),
+  ('Robertson', 'Andrew', 'ressources/PhotoJoueur/Liverpool/AR.webp', 'D', 2),
+  ('van Dijk', 'Virgil', 'ressources/PhotoJoueur/Liverpool/VV.webp', 'D', 2),
+  ('Matip', 'Joel', 'ressources/PhotoJoueur/Liverpool/JM.webp', 'D', 2),
+  ('Alexander-Arnold', 'Trent', 'ressources/PhotoJoueur/Liverpool/TA.webp', 'D', 2),
+  ('Becker', 'Alisson', 'ressources/PhotoJoueur/Liverpool/AB.webp', 'G', 2);
+
 INSERT INTO Joueur (nom, prenom, photo, poste, idClub)
 VALUES 
-  ('Haaland', 'Erling', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Man City\EH.webp', 'AT', 3),
-  ('Grealish', 'Jack', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Man City\JG1.webp', 'M', 3),
-  ('Alvarez', 'Julian', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Man City\JA.webp', 'AT', 3),
-  ('Foden', 'Phil', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Man City\PF.webp', 'M', 3),
-  ('Kovačić', 'Mateo', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Man City\MK.webp', 'M', 3),
-  ('Rodri', NULL, 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Man City\HR.webp', 'M', 3),
-  ('Gvardiol', 'Josko', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Man City\JG2.webp', 'D', 3),
-  ('Dias', 'Rúben', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Man City\RD.webp', 'D', 3),
-  ('Akanji', 'Manuel', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Man City\MA.webp', 'D', 3),
-  ('Walker', 'Kyle', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Man City\KW.webp', 'D', 3),
-  ('Ederson', NULL, 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Man City\E.webp', 'G', 3);
+  ('Haaland', 'Erling', 'ressources/PhotoJoueur/ManCity/EH.webp', 'AT', 3),
+  ('Grealish', 'Jack', 'ressources/PhotoJoueur/ManCity/JG1.webp', 'M', 3),
+  ('Alvarez', 'Julian', 'ressources/PhotoJoueur/ManCity/JA.webp', 'AT', 3),
+  ('Foden', 'Phil', 'ressources/PhotoJoueur/ManCity/PF.webp', 'M', 3),
+  ('Kovačić', 'Mateo', 'ressources/PhotoJoueur/ManCity/MK.webp', 'M', 3),
+  ('Rodri', NULL, 'ressources/PhotoJoueur/ManCity/HR.webp', 'M', 3),
+  ('Gvardiol', 'Josko', 'ressources/PhotoJoueur/ManCity/JG2.webp', 'D', 3),
+  ('Dias', 'Rúben', 'ressources/PhotoJoueur/ManCity/RD.webp', 'D', 3),
+  ('Akanji', 'Manuel', 'ressources/PhotoJoueur/ManCity/MA.webp', 'D', 3),
+  ('Walker', 'Kyle', 'ressources/PhotoJoueur/ManCity/KW.webp', 'D', 3),
+  ('Ederson', NULL, 'ressources/PhotoJoueur/ManCity/E.webp', 'G', 3);
+
 
 
 INSERT INTO Joueur (nom, prenom, photo, poste, idClub)
