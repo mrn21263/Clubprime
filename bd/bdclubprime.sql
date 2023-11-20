@@ -109,11 +109,11 @@ INSERT INTO Pays (nom) VALUES
 
 -- Insertion de données dans la table Ligue
 INSERT INTO Ligue (nom, idPays, photoLigue) VALUES
-('Bundesliga', 1, './ressources/LogoLigue/Bundesliga'),
-('Premier League', 2,"./ressources/LogoLigue/PremierLeague"),
-('La Liga', 3,"./ressources/LogoLigue/Laliga"),
-('Ligue 1', 4,"./ressources/LogoLigue/Ligue1"),
-('Serie A', 5,"./ressources/LogoLigue/SeriaA");
+('Bundesliga', 1, 'ressources/LogoLigue/Bundesliga'),
+('Premier League', 2,"ressources/LogoLigue/PremierLeague"),
+('La Liga', 3,"ressources/LogoLigue/Laliga"),
+('Ligue 1', 4,"ressources/LogoLigue/Ligue1"),
+('Serie A', 5,"ressources/LogoLigue/SeriaA");
 
 -- Insertion de données dans la table Club
 INSERT INTO Club (nom, stade, descr, dateCrea, idLigue, descrStade, photoStade, entraineur, photoEntraineur, codeCouleur) VALUES
