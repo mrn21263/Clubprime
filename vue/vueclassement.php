@@ -14,13 +14,7 @@ if (!empty($podium)) {
 } else {
     echo "Aucun résultat trouvé pour l'année $annee.";
 }
-
+echo  $premierClub; 
 echo $imagepremierClub;
-$test = "ressources/LogoEquipe/Bayern/20022017.png"; 
-$testmarchepas ="ressources/LogoEquipe/Bayern/20022017.png";
-var_dump($imagepremierClub);
 ?>
-
 <img src="../<?php echo $imagepremierClub; ?>" alt="logo equipe1">
-<img src="../<?php echo $test; ?>" alt="logo equipe1">
-<img src="../<?php echo $testmarchepas; ?>" alt="logo esefquipe1">
