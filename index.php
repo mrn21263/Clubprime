@@ -141,6 +141,7 @@
   </div>
   <?php
   include './vue/footer.php';
+  include './model/bdconnexion.php';
   ?>
   <script src="./js/script.js"></script>
 </body>
