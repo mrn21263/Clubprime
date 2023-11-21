@@ -1,0 +1,13 @@
+USE id21551042_clubprime;
+select nom from club where id = 1;
+
+select photoLigue from ligue Inner join club ON  club.idLigue = ligue.id where club.id = 1;
+select MAX(photologo) from logo inner join club on logo.idClub = Club.id where club.id=1;
+Select descr from club where id=1;
+select photologo from logo inner join club on logo.idClub = Club.id where club.id=1;
+select photoStade from club where id=1;
+select descrStade from club where id=1;
+
+select photoTrophee,nombre from trophee 
+inner join obtenir on obtenir.idTrophee = trophee.id
+inner join club on obtenir.idClub = club.id;
