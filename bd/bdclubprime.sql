@@ -16,9 +16,9 @@ CREATE TABLE IF NOT EXISTS Club (
     dateCrea DATE,
     idLigue INT,
     descrStade VARCHAR(277),
-    photoStade BLOB,
+    photoStade VARCHAR(277),
     entraineur VARCHAR(277),
-    photoEntraineur BLOB,
+    photoEntraineur VARCHAR(277),
     codeCouleur VARCHAR(277),
     FOREIGN KEY (idLigue) REFERENCES Ligue(id)
 );
@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS Ligue (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nom VARCHAR(277) NOT NULL,
     idPays INT,
-    photoLigue BLOB,
+    photoLigue VARCHAR(277),
     FOREIGN KEY (idPays) REFERENCES Pays(id)
 );
 
@@ -43,7 +43,7 @@ CREATE TABLE IF NOT EXISTS Joueur (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nom VARCHAR(277) NOT NULL,
     prenom VARCHAR(277) NOT NULL,
-    photo BLOB,
+    photo VARCHAR(277),
     poste VARCHAR(277),
     idClub INT,
     FOREIGN KEY (idClub) REFERENCES Club(id)
@@ -53,7 +53,7 @@ CREATE TABLE IF NOT EXISTS Joueur (
 CREATE TABLE IF NOT EXISTS Trophee (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nom VARCHAR(277) NOT NULL,
-    photoTrophee BLOB
+    photoTrophee VARCHAR(277)
 );
 
 -- Création de la table Classement
@@ -95,7 +95,7 @@ CREATE TABLE IF NOT EXISTS Logo (
    annee int,
    idClub INT,
    periode varchar(255),
-   photoLogo BLOB,
+   photoLogo VARCHAR(277),
    FOREIGN KEY (idClub) REFERENCES Club(id),
    PRIMARY KEY (annee, idClub)
 );
@@ -109,53 +109,54 @@ INSERT INTO Pays (nom) VALUES
 
 -- Insertion de données dans la table Ligue
 INSERT INTO Ligue (nom, idPays, photoLigue) VALUES
-('Bundesliga', 1, 'C:\Users\sdasilva\Desktop\logo\bundesliga.png'),
-('Premier League', 2,"C:\Users\sdasilva\Desktop\logo\premierleague.png"),
-('La Liga', 3,"C:\Users\sdasilva\Desktop\logo\laliga"),
-('Ligue 1', 4,"C:\Users\sdasilva\Desktop\logo\ligue1"),
-('Serie A', 5,"C:\Users\sdasilva\Desktop\logo\seriaA");
+('Bundesliga', 1, 'ressources/LogoLigue/Bundesliga.png'),
+('Premier League', 2,"ressources/LogoLigue/PremierLeague.png"),
+('La Liga', 3,"ressources/LogoLigue/LaLiga.png"),
+('Ligue 1', 4,"ressources/LogoLigue/Ligue1.png"),
+('Serie A', 5,"ressources/LogoLigue/SeriaA.png");
 
 -- Insertion de données dans la table Club
 INSERT INTO Club (nom, stade, descr, dateCrea, idLigue, descrStade, photoStade, entraineur, photoEntraineur, codeCouleur) VALUES
-('Bayern', 'Allianz Arena', 'Club de football basé à Munich, Allemagne', '1900-02-27', 1, "L'Allianz Arena ou Fußball Arena München, surnommée le « Schlauchboot » en raison de son aspect, est un stade de football situé au nord de Munich, la capitale du Land de Bavière en Allemagne. Le stade a une capacité de 75 000 spectateurs pour les matchs de Bundesliga, et 70 000 places en configuration internationale.", "E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Bayern\Stade.jpg" ,"Thomas Tuchel", "E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Bayern\Entraineur.jpg",'#dd0129'),
-('Liverpool', 'Anfield', 'Club de football historique de la Premier League anglaise', '1892-03-17', 2, "Anfield, situé à Liverpool, est un stade de football légendaire, surnommé le « Théâtre des rêves rouges ». Construit au nord de la ville, il est le sanctuaire du Liverpool Football Club. Doté d'une atmosphère électrique, Anfield offre une capacité de 53 394 places en configuration de matchs de la Premier League. Le stade emblématique a été le témoin de moments historiques du football, de chants passionnés et de célébrations inoubliables.","E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Liverpool\Stade.jpg" ,"Jürgen Klopp", "E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Liverpool\Entraineur.jpg",'#d10022'),
-('Man City', 'Etihad Stadium', 'Club de football de Manchester jouant en Premier League', '1880-04-16', 2, "L'Etihad Stadium, niché à Manchester, est le foyer éclatant du Manchester City FC. Surnommé le City of Manchester Stadium, il se dresse fièrement au cœur de l'action. Avec une capacité de plus de 53 000 places, ce stade moderne est le théâtre de performances époustouflantes de l'équipe des Ciel et Blanc, illuminant les rêves des supporters.", "E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Man City\Stade.jpg" ,"Pep Guardiola", "E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Man City\Entraineur.jpg",'#6caee0'),
-('Real Madrid', 'Santiago Bernabéu', 'Club de football espagnol de la ville de Madrid', '1902-03-06', 3, "Le Santiago Bernabéu, légende du football basé à Madrid, est le temple sacré du Real Madrid. Renommé pour son histoire glorieuse, il peut accueillir plus de 80 000 fans passionnés. Ce stade emblématique est imprégné d'une atmosphère magique lors des matchs, offrant une expérience incomparable aux aficionados madrilènes.", "E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Real Madrid\Stade.webp" ,"Carlo Ancelotti", "E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Real Madrid\Entraineur.jpg",NULL),
-('Chelsea', 'Stamford Bridge', 'Club de football londonien de Premier League', '1905-03-10', 2, "Stamford Bridge, résidence du Chelsea FC, se dresse avec élégance à Londres. Avec une capacité de plus de 40 000 sièges, ce stade empreint de tradition est le lieu où les Blues de Chelsea forgent leur histoire. L'atmosphère vibrante de Stamford Bridge fait de chaque match une aventure captivante.", "E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Chelsea\Stade.jpg" ,"Mauricio Pochettino", "E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Chelsea\Entraineur.jpg", '#000c8a'),
-('Barcelone', 'Camp Nou', 'Club de football de Barcelone un des plus reconnus au monde', '1899-11-29', 3, "Le Camp Nou, situé à Barcelone, est le géant catalan où le FC Barcelone écrit son histoire. Avec une capacité de plus de 99 000 spectateurs, il est le plus grand stade d'Europe. L'ambiance électrique, et les prouesses de génies du ballon rond font du Camp Nou un lieu mythique.", "E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Barcelone\Stade.jpg" ,"Xavi Hernández", "E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Barcelone\Entraineur.jpg",NULL),
-('PSG', 'Parc des Princes', 'Club de football français basé à Paris', '1970-08-12', 4, "Le Parc des Princes, joyau parisien, est l'antre du Paris Saint-Germain. Avec une capacité de plus de 48 000 places, ce stade moderne vibre au rythme des exploits des stars du PSG. L'élégance et le dynamisme du Parc des Princes en font un lieu emblématique du football français.", "E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\PSG\Stade.jpg" ,"Luis Enrique", "E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\PSG\Entraineur.jpg",NULL),
-('Juventus', 'Allianz Stadium', 'Club de football italien situé à Turin', '1897-11-01', 5, "L'Allianz Stadium, situé à Turin, est le repaire de la Juventus. Avec une capacité de plus de 41 000 sièges, ce stade moderne offre une expérience immersive aux fans bianconeri. L'Allianz Stadium est le théâtre des triomphes de la Vecchia Signora, avec une ambiance électrisante à chaque rencontre.", "E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Juventus\Stade.jpg" ,"Massimiliano Allegri", "E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Juventus\Entraineur.jpg",NULL),
-('Atlético de Madrid', 'Wanda Metropolitano', 'Club de football basé à Madrid, Espagne', '1903-04-26', 3, "Le Wanda Metropolitano, situé à Madrid, est le nouveau sanctuaire de l'Atlético de Madrid. Avec une capacité de plus de 68 000 places, il incarne la passion et la détermination des Colchoneros. Ce stade moderne est le témoin de la lutte incessante de l'Atlético sur le terrain.", "E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Atletico Madrid\Stade.jpg" ,"Diego Simeone", "E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Atletico Marid\Entraineur.jpg",NULL ),
-('Man United', 'Old Trafford', 'Club de football anglais basé à Manchester, très populaire mondialement', '1878-01-01', 2, "Old Trafford, trésor de Manchester, est l'icône du Manchester United. Avec une capacité de plus de 74 000 sièges, il résonne de l'histoire glorieuse du club. Surnommé le Théâtre des Rêves, Old Trafford est le lieu où les Red Devils forgent leur légende, avec une atmosphère incomparable.", "E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Man United\Stade.jpg" ,"Erik ten Hag", "E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Man United\Entraineur.jpg",NULL),
-('Roma', 'Stadio Olimpico', 'Club de football basé à Rome, Italie', '1927-07-22', 5, "Le Stadio Olimpico, situé à Rome, est le temple de l'AS Roma. Avec une capacité de plus de 70 000 places, ce stade historique a été le témoin de moments inoubliables de la Roma. L'atmosphère passionnée du Stadio Olimpico rend chaque match mémorable pour les supporters giallorossi.", "E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Roma\Stade.jpg" ,"José Mourinho", "E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Roma\Entraineur.jpg",NULL);
+('Bayern', 'Allianz Arena', 'Club de football basé à Munich, Allemagne', '1900-02-27', 1, "L'Allianz Arena ou Fußball Arena München, surnommée le « Schlauchboot » en raison de son aspect, est un stade de football situé au nord de Munich, la capitale du Land de Bavière en Allemagne. Le stade a une capacité de 75 000 spectateurs pour les matchs de Bundesliga, et 70 000 places en configuration internationale.", "ressources/PhotoJoueur/Bayern/Stade.jpg" ,"Thomas Tuchel", "ressources/PhotoJoueur/Bayern/Entraineur.jpg",'#dd0129'),
+('Liverpool', 'Anfield', 'Club de football historique de la Premier League anglaise', '1892-03-17', 2, "Anfield, situé à Liverpool, est un stade de football légendaire, surnommé le « Théâtre des rêves rouges ». Construit au nord de la ville, il est le sanctuaire du Liverpool Football Club. Doté d'une atmosphère électrique, Anfield offre une capacité de 53 394 places en configuration de matchs de la Premier League. Le stade emblématique a été le témoin de moments historiques du football, de chants passionnés et de célébrations inoubliables.","ressources/PhotoJoueur/Liverpool/Stade.jpg" ,"Jürgen Klopp", "ressources/PhotoJoueur/Liverpool/Entraineur.jpg",'#d10022'),
+('Man City', 'Etihad Stadium', 'Club de football de Manchester jouant en Premier League', '1880-04-16', 2, "L'Etihad Stadium, niché à Manchester, est le foyer éclatant du Manchester City FC. Surnommé le City of Manchester Stadium, il se dresse fièrement au cœur de l'action. Avec une capacité de plus de 53 000 places, ce stade moderne est le théâtre de performances époustouflantes de l'équipe des Ciel et Blanc, illuminant les rêves des supporters.", "ressources/PhotoJoueur/ManCity/Stade.jpg" ,"Pep Guardiola", "ressources/PhotoJoueur/ManCity/Entraineur.jpg",'#6caee0'),
+('Real Madrid', 'Santiago Bernabéu', 'Club de football espagnol de la ville de Madrid', '1902-03-06', 3, "Le Santiago Bernabéu, légende du football basé à Madrid, est le temple sacré du Real Madrid. Renommé pour son histoire glorieuse, il peut accueillir plus de 80 000 fans passionnés. Ce stade emblématique est imprégné d'une atmosphère magique lors des matchs, offrant une expérience incomparable aux aficionados madrilènes.", "ressources/PhotoJoueur/RealMadrid/Stade.webp" ,"Carlo Ancelotti", "ressources/PhotoJoueur/Real Madrid/Entraineur.jpg",NULL),
+('Chelsea', 'Stamford Bridge', 'Club de football londonien de Premier League', '1905-03-10', 2, "Stamford Bridge, résidence du Chelsea FC, se dresse avec élégance à Londres. Avec une capacité de plus de 40 000 sièges, ce stade empreint de tradition est le lieu où les Blues de Chelsea forgent leur histoire. L'atmosphère vibrante de Stamford Bridge fait de chaque match une aventure captivante.", "ressources/PhotoJoueur/Chelsea/Stade.jpg" ,"Mauricio Pochettino", "ressources/PhotoJoueur/Chelsea/Entraineur.jpg", '#000c8a'),
+('Barcelone', 'Camp Nou', 'Club de football de Barcelone un des plus reconnus au monde', '1899-11-29', 3, "Le Camp Nou, situé à Barcelone, est le géant catalan où le FC Barcelone écrit son histoire. Avec une capacité de plus de 99 000 spectateurs, il est le plus grand stade d'Europe. L'ambiance électrique, et les prouesses de génies du ballon rond font du Camp Nou un lieu mythique.", "ressources/PhotoJoueur/Barcelone/Stade.jpg" ,"Xavi Hernández", "ressources/PhotoJoueur/Barcelone/Entraineur.jpg",NULL),
+('PSG', 'Parc des Princes', 'Club de football français basé à Paris', '1970-08-12', 4, "Le Parc des Princes, joyau parisien, est l'antre du Paris Saint-Germain. Avec une capacité de plus de 48 000 places, ce stade moderne vibre au rythme des exploits des stars du PSG. L'élégance et le dynamisme du Parc des Princes en font un lieu emblématique du football français.", "ressources/PhotoJoueur/PSG/Stade.jpg" ,"Luis Enrique", "ressources/PhotoJoueur/PSG/Entraineur.jpg",NULL),
+('Juventus', 'Allianz Stadium', 'Club de football italien situé à Turin', '1897-11-01', 5, "L'Allianz Stadium, situé à Turin, est le repaire de la Juventus. Avec une capacité de plus de 41 000 sièges, ce stade moderne offre une expérience immersive aux fans bianconeri. L'Allianz Stadium est le théâtre des triomphes de la Vecchia Signora, avec une ambiance électrisante à chaque rencontre.", "ressources/PhotoJoueur/Juventus/Stade.jpg" ,"Massimiliano Allegri", "ressources/PhotoJoueur/Juventus/Entraineur.jpg",NULL),
+('Atlético de Madrid', 'Wanda Metropolitano', 'Club de football basé à Madrid, Espagne', '1903-04-26', 3, "Le Wanda Metropolitano, situé à Madrid, est le nouveau sanctuaire de l'Atlético de Madrid. Avec une capacité de plus de 68 000 places, il incarne la passion et la détermination des Colchoneros. Ce stade moderne est le témoin de la lutte incessante de l'Atlético sur le terrain.", "ressources/PhotoJoueur/AtleticoMadrid/Stade.jpg" ,"Diego Simeone", "ressources/PhotoJoueur/AtleticoMarid/Entraineur.jpg",NULL ),
+('Man United', 'Old Trafford', 'Club de football anglais basé à Manchester, très populaire mondialement', '1878-01-01', 2, "Old Trafford, trésor de Manchester, est l'icône du Manchester United. Avec une capacité de plus de 74 000 sièges, il résonne de l'histoire glorieuse du club. Surnommé le Théâtre des Rêves, Old Trafford est le lieu où les Red Devils forgent leur légende, avec une atmosphère incomparable.", "ressources/PhotoJoueur/ManUnited/Stade.jpg" ,"Erik ten Hag", "ressources/PhotoJoueur/ManUnited/Entraineur.jpg",NULL),
+('Roma', 'Stadio Olimpico', 'Club de football basé à Rome, Italie', '1927-07-22', 5, "Le Stadio Olimpico, situé à Rome, est le temple de l'AS Roma. Avec une capacité de plus de 70 000 places, ce stade historique a été le témoin de moments inoubliables de la Roma. L'atmosphère passionnée du Stadio Olimpico rend chaque match mémorable pour les supporters giallorossi.", "ressources/PhotoJoueur/Roma/Stade.jpg" ,"José Mourinho", "ressources/PhotoJoueur/Roma/Entraineur.jpg",NULL);
 
--- Insertion de données dans la table Trophee
+
 INSERT INTO Trophee (nom, photoTrophee) VALUES
-('Ligue 1', 'E:\SIO\Developpement\AP\Club Prime\Photo Trophee\Ligue 1.png'),
-('Coupe de France', 'E:\SIO\Developpement\AP\Club Prime\Photo Trophee\Coupe de France.png'),
-('Trophée des Champions (France)', 'E:\SIO\Developpement\AP\Club Prime\Photo Trophee\Trophée des champions.png'),
-('Serie A', 'E:\SIO\Developpement\AP\Club Prime\Photo Trophee\Serie A.png'),
-('Coppa Italia', 'E:\SIO\Developpement\AP\Club Prime\Photo Trophee\Coppa Italia.png'),
-('Supercoppa Italiana', 'E:\SIO\Developpement\AP\Club Prime\Photo Trophee\Supercoppa Italiana.png'),
-('Premier League', 'E:\SIO\Developpement\AP\Club Prime\Photo Trophee\Premier League.png'),
-('FA Cup', 'E:\SIO\Developpement\AP\Club Prime\Photo Trophee\FA Cup.png'),
-('Carabao Cup', 'E:\SIO\Developpement\AP\Club Prime\Photo Trophee\Carabao Cup.png'),
-('Community Shield (Angleterre)', 'E:\SIO\Developpement\AP\Club Prime\Photo Trophee\Community Shield.png'),
-('Bundesliga', 'E:\SIO\Developpement\AP\Club Prime\Photo Trophee\Bundesliga.jpg'),
-('DFB-Pokal', 'E:\SIO\Developpement\AP\Club Prime\Photo Trophee\DFB-Pokal.png'),
-('DFL-Supercup', 'E:\SIO\Developpement\AP\Club Prime\Photo Trophee\DFL-Supercup.png'),
-('La Liga', 'E:\SIO\Developpement\AP\Club Prime\Photo Trophee\La Liga.png'),
-('Copa del Rey', 'E:\SIO\Developpement\AP\Club Prime\Photo Trophee\Copa del Rey.png'),
-('Supercopa de España', 'E:\SIO\Developpement\AP\Club Prime\Photo Trophee\Supercopa de España.png'),
-('Ligue des champions de l''UEFA', 'E:\SIO\Developpement\AP\Club Prime\Photo Trophee\Ligue des champions.png'),
-('Ligue Europa de l''UEFA', 'E:\SIO\Developpement\AP\Club Prime\Photo Trophee\Ligue Europa.png'),
-('Supercoupe de l''UEFA', 'Supercoupe UEFA'),
-('Fifa Club World Cup', 'E:\SIO\Developpement\AP\Club Prime\Photo Trophee\Fifa Club World Cup.png'),
-('Audi Cup', 'E:\SIO\Developpement\AP\Club Prime\Photo Trophee\Audi Cup.png'),
-('Premier League Asia Trophy', 'E:\SIO\Developpement\AP\Club Prime\Photo Trophee\Premier League Asia Trophy.png'),
-('International Champions Cup', 'E:\SIO\Developpement\AP\Club Prime\Photo Trophee\International Campions Cup.png'),
-('Trophée Joan Gamper', 'E:\SIO\Developpement\AP\Club Prime\Photo Trophee\Trophée Joan Gamper.png'),
-('UEFA Europa Conference League', 'E:\SIO\Developpement\AP\Club Prime\Photo Trophee\UEFA Europa Conference League.png');
+('Ligue 1', 'ressources/PhotoTrophee/Ligue1.png'),
+('Coupe de France', 'ressources/PhotoTrophee/CoupeDeFrance.png'),
+('Trophée des Champions', 'ressources/PhotoTrophee/TropheeDesChampions.png'),
+('Serie A', 'ressources/PhotoTrophee/SerieA.png'),
+('Coppa Italia', 'ressources/PhotoTrophee/CoppaItalia.png'),
+('Supercoppa Italiana', 'ressources/PhotoTrophee/SupercoppaItaliana.png'),
+('Premier League', 'ressources/PhotoTrophee/PremierLeague.png'),
+('FA Cup', 'ressources/PhotoTrophee/FACup.png'),
+('Carabao Cup', 'ressources/PhotoTrophee/CarabaoCup.png'),
+('Community Shield', 'ressources/PhotoTrophee/CommunityShield.png'),
+('Bundesliga', 'ressources/PhotoTrophee/Bundesliga.jpg'),
+('DFB-Pokal', 'ressources/PhotoTrophee/DFBPokal.png'),
+('DFL-Supercup', 'ressources/PhotoTrophee/DFLSupercup.png'),
+('La Liga', 'ressources/PhotoTrophee/LaLiga.png'),
+('Copa del Rey', 'ressources/PhotoTrophee/CopaDelRey.png'),
+('Supercopa de España', 'ressources/PhotoTrophee/SupercopaDeEspana.png'),
+('Ligue des Champions de l''UEFA', 'ressources/PhotoTrophee/LigueDesChampions.png'),
+('Ligue Europa de l\''UEFA', 'ressources/PhotoTrophee/LigueEuropa.png'),
+('Supercoupe de l\''UEFA', 'ressources/PhotoTrophee/SupercoupeUEFA.png'),
+('Fifa Club World Cup', 'ressources/PhotoTrophee/FifaClubWorldCup.png'),
+('Audi Cup', 'ressources/PhotoTrophee/AudiCup.png'),
+('Premier League Asia Trophy', 'ressources/PhotoTrophee/PremierLeagueAsiaTrophy.png'),
+('International Champions Cup', 'ressources/PhotoTrophee/InternationalChampionsCup.png'),
+('Trophée Joan Gamper', 'ressources/PhotoTrophee/TropheeJoanGamper.png'),
+('UEFA Europa Conference League', 'ressources/PhotoTrophee/UEFAEuropaConferenceLeague.png');
+
 -- Insertion de données dans la table Classement
 INSERT INTO Classement (annee, position, idClub) VALUES
 ('2022', 1, 1),
@@ -289,162 +290,164 @@ INSERT INTO Obtenir (idClub, nombre, idTrophee) VALUES
      
 INSERT INTO Joueur (nom, prenom, photo, poste, idClub)
 VALUES
-  ('Ulreich', 'Sven', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Bayern\SU.webp', 'G', 1),
-  ('Davies', 'Alphonso', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Bayern\AD.webp', 'D', 1),
-  ('Kim', 'Min-Jae', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Bayern\MJK.webp', 'D', 1),
-  ('Upamecano', 'Dayot', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Bayern\DU.webp', 'D', 1),
-  ('Mazraoui', 'Noussair', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Bayern\MN.webp', 'D', 1),
-  ('Kimmich', 'Joshua', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Bayern\JK.webp', 'M', 1),
-  ('Goretzka', 'Leon', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Bayern\LG.webp', 'M', 1),
-  ('Coman', 'Kingsley', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Bayern\KC.webp', 'AT', 1),
-  ('Musiala', 'Jamal', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Bayern\JM.webp', 'M', 1),
-  ('Sané', 'Leroy', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Bayern\LS.webp', 'AT', 1),
-  ('Kane', 'Harry', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Bayern\HK.webp', 'AT', 1);
+  ('Ulreich', 'Sven', 'ressources/PhotoJoueur/Bayern/SU.webp', 'G', 1),
+  ('Davies', 'Alphonso', 'ressources/PhotoJoueur/Bayern/AD.webp', 'D', 1),
+  ('Kim', 'Min-Jae', 'ressources/PhotoJoueur/Bayern/MJK.webp', 'D', 1),
+  ('Upamecano', 'Dayot', 'ressources/PhotoJoueur/Bayern/DU.webp', 'D', 1),
+  ('Mazraoui', 'Noussair', 'ressources/PhotoJoueur/Bayern/MN.webp', 'D', 1),
+  ('Kimmich', 'Joshua', 'ressources/PhotoJoueur/Bayern/JK.webp', 'M', 1),
+  ('Goretzka', 'Leon', 'ressources/PhotoJoueur/Bayern/LG.webp', 'M', 1),
+  ('Coman', 'Kingsley', 'ressources/PhotoJoueur/Bayern/KC.webp', 'AT', 1),
+  ('Musiala', 'Jamal', 'ressources/PhotoJoueur/Bayern/JM.webp', 'M', 1),
+  ('Sané', 'Leroy', 'ressources/PhotoJoueur/Bayern/LS.webp', 'AT', 1),
+  ('Kane', 'Harry', 'ressources/PhotoJoueur/Bayern/HK.webp', 'AT', 1);
+
 
 INSERT INTO Joueur (nom, prenom, photo, poste, idClub)
 VALUES
-  ('Díaz', 'Luis', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Liverpool\LD.webp', 'AT', 2),
-  ('Núñez', 'Darwin', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Liverpool\DN.webp', 'AT', 2),
-  ('Salah', 'Mohamed', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Liverpool\MS.webp', 'AT', 2),
-  ('Jones', 'Curtis', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Liverpool\CJ.webp', 'M', 2),
-  ('Mac Allister', 'Alexis', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Liverpool\AM.webp', 'M', 2),
-  ('Szoboszlai', 'Dominik', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Liverpool\DS.webp', 'M', 2),
-  ('Robertson', 'Andrew', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Liverpool\AR.webp', 'D', 2),
-  ('van Dijk', 'Virgil', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Liverpool\VV.webp', 'D', 2),
-  ('Matip', 'Joel', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Liverpool\JM.webp', 'D', 2),
-  ('Alexander-Arnold', 'Trent', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Liverpool\TA.webp', 'D', 2),
-  ('Becker', 'Alisson', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Liverpool\AB.webp', 'G', 2);
+  ('Díaz', 'Luis', 'ressources/PhotoJoueur/Liverpool/LD.webp', 'AT', 2),
+  ('Núñez', 'Darwin', 'ressources/PhotoJoueur/Liverpool/DN.webp', 'AT', 2),
+  ('Salah', 'Mohamed', 'ressources/PhotoJoueur/Liverpool/MS.webp', 'AT', 2),
+  ('Jones', 'Curtis', 'ressources/PhotoJoueur/Liverpool/CJ.webp', 'M', 2),
+  ('Mac Allister', 'Alexis', 'ressources/PhotoJoueur/Liverpool/AM.webp', 'M', 2),
+  ('Szoboszlai', 'Dominik', 'ressources/PhotoJoueur/Liverpool/DS.webp', 'M', 2),
+  ('Robertson', 'Andrew', 'ressources/PhotoJoueur/Liverpool/AR.webp', 'D', 2),
+  ('van Dijk', 'Virgil', 'ressources/PhotoJoueur/Liverpool/VV.webp', 'D', 2),
+  ('Matip', 'Joel', 'ressources/PhotoJoueur/Liverpool/JM.webp', 'D', 2),
+  ('Alexander-Arnold', 'Trent', 'ressources/PhotoJoueur/Liverpool/TA.webp', 'D', 2),
+  ('Becker', 'Alisson', 'ressources/PhotoJoueur/Liverpool/AB.webp', 'G', 2);
+
 INSERT INTO Joueur (nom, prenom, photo, poste, idClub)
 VALUES 
-  ('Haaland', 'Erling', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Man City\EH.webp', 'AT', 3),
-  ('Grealish', 'Jack', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Man City\JG1.webp', 'M', 3),
-  ('Alvarez', 'Julian', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Man City\JA.webp', 'AT', 3),
-  ('Foden', 'Phil', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Man City\PF.webp', 'M', 3),
-  ('Kovačić', 'Mateo', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Man City\MK.webp', 'M', 3),
-  ('Rodri', NULL, 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Man City\HR.webp', 'M', 3),
-  ('Gvardiol', 'Josko', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Man City\JG2.webp', 'D', 3),
-  ('Dias', 'Rúben', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Man City\RD.webp', 'D', 3),
-  ('Akanji', 'Manuel', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Man City\MA.webp', 'D', 3),
-  ('Walker', 'Kyle', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Man City\KW.webp', 'D', 3),
-  ('Ederson', NULL, 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Man City\E.webp', 'G', 3);
+  ('Haaland', 'Erling', 'ressources/PhotoJoueur/ManCity/EH.webp', 'AT', 3),
+  ('Grealish', 'Jack', 'ressources/PhotoJoueur/ManCity/JG1.webp', 'M', 3),
+  ('Alvarez', 'Julian', 'ressources/PhotoJoueur/ManCity/JA.webp', 'AT', 3),
+  ('Foden', 'Phil', 'ressources/PhotoJoueur/ManCity/PF.webp', 'M', 3),
+  ('Kovačić', 'Mateo', 'ressources/PhotoJoueur/ManCity/MK.webp', 'M', 3),
+  ('Rodri', NULL, 'ressources/PhotoJoueur/ManCity/HR.webp', 'M', 3),
+  ('Gvardiol', 'Josko', 'ressources/PhotoJoueur/ManCity/JG2.webp', 'D', 3),
+  ('Dias', 'Rúben', 'ressources/PhotoJoueur/ManCity/RD.webp', 'D', 3),
+  ('Akanji', 'Manuel', 'ressources/PhotoJoueur/ManCity/MA.webp', 'D', 3),
+  ('Walker', 'Kyle', 'ressources/PhotoJoueur/ManCity/KW.webp', 'D', 3),
+  ('Ederson', NULL, 'ressources/PhotoJoueur/ManCity/E.webp', 'G', 3);
+
+-- Real Madrid
+INSERT INTO Joueur (nom, prenom, photo, poste, idClub)
+VALUES
+  ('Vinicius', 'Junior', 'ressources/PhotoJoueur/RealMadrid/VJ.webp', 'AT', 4),
+  ('Joselu', NULL, 'ressources/PhotoJoueur/RealMadrid/J.webp', 'AT', 4),
+  ('Bellingham', 'Jude', 'ressources/PhotoJoueur/RealMadrid/JB.webp', 'M', 4),
+  ('Camavinga', 'Eduardo', 'ressources/PhotoJoueur/RealMadrid/EC.webp', 'M', 4),
+  ('Tchouameni', 'Aurélien', 'ressources/PhotoJoueur/RealMadrid/AT.webp', 'M', 4),
+  ('Valverde', 'Federico', 'ressources/PhotoJoueur/RealMadrid/FV.webp', 'M', 4),
+  ('Garcia', 'Fran', 'ressources/PhotoJoueur/RealMadrid/FG.webp', 'D', 4),
+  ('Alaba', 'David', 'ressources/PhotoJoueur/RealMadrid/DA.webp', 'D', 4),
+  ('Rudiger', 'Antonio', 'ressources/PhotoJoueur/RealMadrid/AR.webp', 'D', 4),
+  ('Carvajal', 'Dani', 'ressources/PhotoJoueur/RealMadrid/DC.webp', 'D', 4),
+  ('Kepa', NULL, 'ressources/PhotoJoueur/RealMadrid/AK.webp', 'G', 4);
+
+-- Chelsea
+INSERT INTO Joueur (nom, prenom, photo, poste, idClub)
+VALUES
+  ('Mudryk', 'Mykhailo', 'ressources/PhotoJoueur/Chelsea/MM.webp', 'AT', 5),
+  ('Fernández', 'Enzo', 'ressources/PhotoJoueur/Chelsea/EJF.webp', 'M', 5),
+  ('Sterling', 'Raheem', 'ressources/PhotoJoueur/Chelsea/RS.webp', 'AT', 5),
+  ('Jackson', 'Nicolas', 'ressources/PhotoJoueur/Chelsea/NJ.webp', 'AT', 5),
+  ('Caicedo', 'Moisés', 'ressources/PhotoJoueur/Chelsea/MC.webp', 'M', 5),
+  ('Gallagher', 'Conor', 'ressources/PhotoJoueur/Chelsea/CG.webp', 'M', 5),
+  ('Cucurella', 'Marc', 'ressources/PhotoJoueur/Chelsea/MC.webp', 'D', 5),
+  ('Colwill', 'Levi', 'ressources/PhotoJoueur/Chelsea/LSC.webp', 'D', 5),
+  ('Silva', 'Thiago', 'ressources/PhotoJoueur/Chelsea/TS.webp', 'D', 5),
+  ('Gusto', 'Malo', 'ressources/PhotoJoueur/Chelsea/MG.webp', 'D', 5),
+  ('Sánchez', 'Robert', 'ressources/PhotoJoueur/Chelsea/RS.webp', 'G', 5);
+
+-- Barcelone
+INSERT INTO Joueur (nom, prenom, photo, poste, idClub)
+VALUES
+  ('Félix', 'João', 'ressources/PhotoJoueur/Barcelone/JF.webp', 'AT', 6),
+  ('Lewandowski', 'Robert', 'ressources/PhotoJoueur/Barcelone/RL.webp', 'AT', 6),
+  ('Yamal', 'Lamine', 'ressources/PhotoJoueur/Barcelone/LY.webp', 'AT', 6),
+  ('Gündoğan', 'İlkay', 'ressources/PhotoJoueur/Barcelone/IG.webp', 'M', 6),
+  ('Romeu', 'Oriol', 'ressources/PhotoJoueur/Barcelone/OR.webp', 'M', 6),
+  ('Gavi', '', 'ressources/PhotoJoueur/Barcelone/PMPG.webp', 'M', 6),
+  ('Baldé', '', 'ressources/PhotoJoueur/Barcelone/ABM.webp', 'D', 6),
+  ('Christensen', 'Andreas', 'ressources/PhotoJoueur/Barcelone/AC.webp', 'D', 6),
+  ('Koundé', 'Jules', 'ressources/PhotoJoueur/Barcelone/JK.webp', 'D', 6),
+  ('Cancelo', 'João', 'ressources/PhotoJoueur/Barcelone/JC.webp', 'D', 6),
+  ('ter Stegen', 'Marc-André', 'ressources/PhotoJoueur/Barcelone/MAT.webp', 'G', 6);
+
+-- PSG
+INSERT INTO Joueur (nom, prenom, photo, poste, idClub)
+VALUES
+  ('Mbappé', 'Kylian', 'ressources/PhotoJoueur/PSG/KM.webp', 'AT', 7),
+  ('Ramos', 'Goncalo', 'ressources/PhotoJoueur/PSG/GM.webp', 'AT', 7),
+  ('Dembélé', 'Ousmane', 'ressources/PhotoJoueur/PSG/OD.webp', 'AT', 7),
+  ('Vitinha', '', 'ressources/PhotoJoueur/PSG/VF.webp', 'M', 7),
+  ('Ugarte', 'Manuel', 'ressources/PhotoJoueur/PSG/MU.webp', 'M', 7),
+  ('Zaire-Emery', 'Warren', 'ressources/PhotoJoueur/PSG/WZ.webp', 'M', 7),
+  ('Hernández', 'Lucas', 'ressources/PhotoJoueur/PSG/LH.webp', 'D', 7),
+  ('Skriniar', 'Milan', 'ressources/PhotoJoueur/PSG/MS.webp', 'D', 7),
+  ('Marquinhos', '', 'ressources/PhotoJoueur/PSG/M.webp', 'D', 7),
+  ('Hakimi', 'Achraf', 'ressources/PhotoJoueur/PSG/AH.webp', 'D', 7),
+  ('Donnarumma', 'Gianluigi', 'ressources/PhotoJoueur/PSG/GD.webp', 'G', 7);
+
+-- Juventus
+INSERT INTO Joueur (nom, prenom, photo, poste, idClub)
+VALUES
+  ('Chiesa', 'Federico', 'ressources/PhotoJoueur/Juventus/FC.webp', 'AT', 8),
+  ('Kostić', 'Filip', 'ressources/PhotoJoueur/Juventus/FK.webp', 'M', 8),
+  ('Rabiot', 'Adrien', 'ressources/PhotoJoueur/Juventus/AR.webp', 'M', 8),
+  ('Locatelli', 'Manuel', 'ressources/PhotoJoueur/Juventus/ML.webp', 'M', 8),
+  ('Miretti', 'Fabio', 'ressources/PhotoJoueur/Juventus/FM.webp', 'M', 8),
+  ('McKennie', 'Weston', 'ressources/PhotoJoueur/Juventus/WM.webp', 'M', 8),
+  ('Danilo', NULL, 'ressources/PhotoJoueur/Juventus/PD.webp', 'D', 8),
+  ('Bremer', 'Gleison', 'ressources/PhotoJoueur/Juventus/GBSN.webp', 'D', 8),
+  ('Gatti', 'Federico', 'ressources/PhotoJoueur/Juventus/FG.webp', 'D', 8),
+  ('Vlahović', 'Dušan', 'ressources/PhotoJoueur/Juventus/DV.webp', 'AT', 8);
 
 
 INSERT INTO Joueur (nom, prenom, photo, poste, idClub)
 VALUES
-    ('Vinicius', 'Junior', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Real Madrid\VJ.webp', 'AT', 4),
-    ('Joselu', NULL, 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Real Madrid\J.webp', 'AT', 4),
-    ('Bellingham', 'Jude', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Real Madrid\JB.webp', 'M', 4),
-    ('Camavinga', 'Eduardo', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Real Madrid\EC.webp', 'M', 4),
-    ('Tchouameni', 'Aurélien', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Real Madrid\AT.webp', 'M', 4),
-    ('Valverde', 'Federico', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Real Madrid\FV.webp', 'M', 4),
-    ('Garcia', 'Fran', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Real Madrid\FG.webp', 'D', 4),
-    ('Alaba', 'David', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Real Madrid\DA.webp', 'D', 4),
-    ('Rudiger', 'Antonio', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Real Madrid\AR.webp', 'D', 4),
-    ('Carvajal', 'Dani', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Real Madrid\DC.webp', 'D', 4),
-    ('Kepa', NULL, 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Real Madrid\AK.webp', 'G', 4);
-
-
-INSERT INTO Joueur (nom, prenom, photo, poste, idClub)
-VALUES
-    ('Mudryk', 'Mykhailo', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Chelsea\MM.webp', 'AT', 5),
-    ('Fernández', 'Enzo', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Chelsea\EJF.webp', 'M', 5),
-    ('Sterling', 'Raheem', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Chelsea\RS.webp', 'AT', 5),
-    ('Jackson', 'Nicolas', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Chelsea\NJ.webp', 'AT', 5),
-    ('Caicedo', 'Moisés', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Chelsea\MC.webp', 'M', 5),
-    ('Gallagher', 'Conor', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Chelsea\CG.webp', 'M', 5),
-    ('Cucurella', 'Marc', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Chelsea\MC.webp', 'D', 5),
-    ('Colwill', 'Levi', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Chelsea\LSC.webp', 'D', 5),
-    ('Silva', 'Thiago', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Chelsea\TS.webp', 'D', 5),
-    ('Gusto', 'Malo', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Chelsea\MG.webp', 'D', 5),
-    ('Sánchez', 'Robert', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Chelsea\RS.webp', 'G', 5);
+    ('Morata', 'Álvaro', 'resources/PhotoJoueur/AtleticoMadrid/AM.webp', 'AT', 9),
+    ('Ñíguez', 'Saúl', 'resources/PhotoJoueur/AtleticoMadrid/SN.webp', 'M', 9),
+    ('Koke', NULL, 'resources/PhotoJoueur/AtleticoMadrid/KR.webp', 'M', 9),
+    ('Griezmann', 'Antoine', 'resources/PhotoJoueur/AtleticoMadrid/AG.webp', 'AT', 9),
+    ('Llorente', 'Marcos', 'resources/PhotoJoueur/AtleticoMadrid/ML.webp', 'M', 9),
+    ('Riquelme', 'Rodrigo', 'resources/PhotoJoueur/AtleticoMadrid/RRR.webp', 'M', 9),
+    ('Molina', 'Nahuel', 'resources/PhotoJoueur/AtleticoMadrid/NML.webp', 'D', 9),
+    ('Hermoso', 'Mario', 'resources/PhotoJoueur/AtleticoMadrid/MH.webp', 'D', 9),
+    ('Witsel', 'Axel', 'resources/PhotoJoueur/AtleticoMadrid/AW.webp', 'M', 9),
+    ('Savić', 'Stefan', 'resources/PhotoJoueur/AtleticoMadrid/SS.webp', 'D', 9),
+    ('Oblak', 'Jan', 'resources/PhotoJoueur/AtleticoMadrid/JO.webp', 'G', 9);
 
 INSERT INTO Joueur (nom, prenom, photo, poste, idClub)
 VALUES
-  ('Félix', 'João', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Barcelone\JF.webp', 'AT', 6),
-  ('Lewandowski', 'Robert', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Barcelone\RL.webp', 'AT', 6),
-  ('Yamal', 'Lamine', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Barcelone\LY.webp', 'AT', 6),
-  ('Gündoğan', 'İlkay', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Barcelone\IG.webp', 'M', 6),
-  ('Romeu', 'Oriol', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Barcelone\OR.webp', 'M', 6),
-  ('Gavi', '', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Barcelone\PMPG.webp', 'M', 6),
-  ('Baldé', '', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Barcelone\ABM.webp', 'D', 6),
-  ('Christensen', 'Andreas', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Barcelone\AC.webp', 'D', 6),
-  ('Koundé', 'Jules', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Barcelone\JK.webp', 'D', 6),
-  ('Cancelo', 'João', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Barcelone\JC.webp', 'D', 6),
-  ('ter Stegen', 'Marc-André', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Barcelone\MAT.webp', 'G', 6);
-
-
-  
-INSERT INTO Joueur (nom, prenom, photo, poste, idClub)
-VALUES
-  ('Mbappé', 'Kylian', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\PSG\KM.webp', 'AT', 7),
-  ('Ramos', 'Goncalo', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\PSG\GM.webp', 'AT', 7),
-  ('Dembélé', 'Ousmane', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\PSG\OD.webp', 'AT', 7),
-  ('Vitinha', '', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\PSG\VF.webp', 'M', 7),
-  ('Ugarte', 'Manuel', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\PSG\MU.webp', 'M', 7),
-  ('Zaire-Emery', 'Warren', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\PSG\WZ.webp', 'M', 7),
-  ('Hernández', 'Lucas', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\PSG\LH.webp', 'D', 7),
-  ('Skriniar', 'Milan', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\PSG\MS.webp', 'D', 7),
-  ('Marquinhos', '', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\PSG\M.webp', 'D', 7),
-  ('Hakimi', 'Achraf', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\PSG\AH.webp', 'D', 7),
-  ('Donnarumma', 'Gianluigi', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\PSG\GD.webp', 'G', 7);
-
+    ('Rashford', 'Marcus', 'resources/PhotoJoueur/Man United/MR.webp', 'AT', 10),
+    ('Fernandes', 'Bruno', 'resources/PhotoJoueur/Man United/BF.webp', 'M', 10),
+    ('Antony', NULL, 'resources/PhotoJoueur/Man United/A.webp', 'AT', 10),
+    ('Eriksen', 'Christian', 'resources/PhotoJoueur/Man United/CE.webp', 'M', 10),
+    ('Casemiro', NULL, 'resources/PhotoJoueur/Man United/HC.webp', 'M', 10),
+    ('Dalot', 'Diogo', 'resources/PhotoJoueur/Man United/DD.webp', 'D', 10),
+    ('Evans', 'Jonny', 'resources/PhotoJoueur/Man United/JE.webp', 'D', 10),
+    ('Maguire', 'Harry', 'resources/PhotoJoueur/Man United/HM.webp', 'D', 10),
+    ('Wan-Bissaka', 'Aaron', 'resources/PhotoJoueur/Man United/AB.webp', 'D', 10),
+    ('Onana', 'André', 'resources/PhotoJoueur/Man United/AO.webp', 'G', 10),
+    ('Højlund', 'Rasmus', 'resources/PhotoJoueur/Man United/RH.webp', 'AT', 10);
 
 INSERT INTO Joueur (nom, prenom, photo, poste, idClub)
 VALUES
-    ('Chiesa', 'Federico', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Juventus\FC.webp', 'AT', 8),
-    ('Kostić', 'Filip', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Juventus\FK.webp', 'M', 8),
-    ('Rabiot', 'Adrien', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Juventus\AR.webp', 'M', 8),
-    ('Locatelli', 'Manuel', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Juventus\ML.webp', 'M', 8),
-    ('Miretti', 'Fabio', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Juventus\FM.webp', 'M', 8),
-    ('McKennie', 'Weston', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Juventus\WM.webp', 'M', 8),
-    ('Danilo', NULL, 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Juventus\PD.webp', 'D', 8),
-    ('Bremer', 'Gleison', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Juventus\GBSN.webp', 'D', 8),
-    ('Gatti', 'Federico', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Juventus\FG.webp', 'D', 8),
-    ('Vlahović', 'Dušan', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Juventus\DV.webp', 'AT', 8);
+    ('Lukaku', 'Romelu', 'resources/PhotoJoueur/Roma/RL.webp', 'AT', 11),
+    ('Dybala', 'Paulo', 'resources/PhotoJoueur/Roma/PD.webp', 'AT', 11),
+    ('Zalewski', 'Nicola', 'resources/PhotoJoueur/Roma/NZ.webp', 'M', 11),
+    ('Aouar', 'Houssem', 'resources/PhotoJoueur/Roma/HA.webp', 'M', 11),
+    ('Paredes', 'Leandro', 'resources/PhotoJoueur/Roma/LP.webp', 'M', 11),
+    ('Cristante', 'Bryan', 'resources/PhotoJoueur/Roma/BC.webp', 'M', 11),
+    ('Kristensen', 'Rasmus', 'resources/PhotoJoueur/Roma/RK.webp', 'D', 11),
+    ('Nidcka', 'Emil', 'resources/PhotoJoueur/Roma/EN.webp', 'D', 11),
+    ('Llorente', 'Diego', 'resources/PhotoJoueur/Roma/DL.webp', 'D', 11),
+    ('Mancini', 'Gianluca', 'resources/PhotoJoueur/Roma/GM.webp', 'D', 11),
+    ('Patricio', 'Rui', 'resources/PhotoJoueur/Roma/RP.webp', 'G', 11);
 
-
-INSERT INTO Joueur (nom, prenom, photo, poste, idClub)
-VALUES
-    ('Morata', 'Álvaro', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Atletico Madrid\AM.webp', 'AT', 9),
-    ('Ñíguez', 'Saúl', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Atletico Madrid\SN.webp', 'M', 9),
-    ('Koke', NULL, 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Atletico Madrid\KR.webp', 'M', 9),
-    ('Griezmann', 'Antoine', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Atletico Madrid\AG.webp', 'AT', 9),
-    ('Llorente', 'Marcos', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Atletico Madrid\ML.webp', 'M', 9),
-    ('Riquelme', 'Rodrigo', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Atletico Madrid\RRR.webp', 'M', 9),
-    ('Molina', 'Nahuel', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Atletico Madrid\NML.webp', 'D', 9),
-    ('Hermoso', 'Mario', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Atletico Madrid\MH.webp', 'D', 9),
-    ('Witsel', 'Axel', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Atletico Madrid\AW.webp', 'M', 9),
-    ('Savić', 'Stefan', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Atletico Madrid\SS.webp', 'D', 9),
-    ('Oblak', 'Jan', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Atletico Madrid\JO.webp', 'G', 9);
-
-INSERT INTO Joueur (nom, prenom, photo, poste, idClub)
-VALUES
-    ('Rashford', 'Marcus', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Man United\MR.webp', 'AT', 10),
-    ('Fernandes', 'Bruno', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Man United\BF.webp', 'M', 10),
-    ('Antony', NULL, 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Man United\A.webp', 'AT', 10),
-    ('Eriksen', 'Christian', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Man United\CE.webp', 'M', 10),
-    ('Casemiro', NULL, 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Man United\HC.webp', 'M', 10),
-    ('Dalot', 'Diogo', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Man United\DD.webp', 'D', 10),
-    ('Evans', 'Jonny', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Man United\JE.webp', 'D', 10),
-    ('Maguire', 'Harry', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Man United\HM.webp', 'D', 10),
-    ('Wan-Bissaka', 'Aaron', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Man United\AB.webp', 'D', 10),
-    ('Onana', 'André', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Man United\AO.webp', 'G', 10),
-    ('Højlund', 'Rasmus', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Man United\RH.webp', 'AT', 10);
-
-
-INSERT INTO Joueur (nom, prenom, photo, poste, idClub)
-VALUES
-    ('Lukaku', 'Romelu', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Roma\RL.webp', 'AT', 11),
-    ('Dybala', 'Paulo', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Roma\PD.webp', 'AT', 11),
-    ('Zalewski', 'Nicola', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Roma\NZ.webp', 'M', 11),
-    ('Aouar', 'Houssem', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Roma\HA.webp', 'M', 11),
-    ('Paredes', 'Leandro', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Roma\LP.webp', 'M', 11),
-    ('Cristante', 'Bryan', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Roma\BC.webp', 'M', 11),
-    ('Kristensen', 'Rasmus', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Roma\RK.webp', 'D', 11),
-    ('Nidcka', 'Emil', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Roma\EN.webp', 'D', 11),
-    ('Llorente', 'Diego', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Roma\DL.webp', 'D', 11),
-    ('Mancini', 'Gianluca', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Roma\GM.webp', 'D', 11),
-    ('Patricio', 'Rui', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Roma\RP.webp', 'G', 11);
 
 INSERT INTO Logo VALUES 
     (1900, 1, '1900-1901', 'Z:/TS2SIO SLAM/Kraria Samih/Projet SLAM/Projet ClubPrime/Logo/Bayern/1900-1901.png'),
