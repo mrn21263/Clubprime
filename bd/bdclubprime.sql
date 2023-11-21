@@ -331,78 +331,79 @@ VALUES
   ('Walker', 'Kyle', 'ressources/PhotoJoueur/ManCity/KW.webp', 'D', 3),
   ('Ederson', NULL, 'ressources/PhotoJoueur/ManCity/E.webp', 'G', 3);
 
+-- Real Madrid
 INSERT INTO Joueur (nom, prenom, photo, poste, idClub)
 VALUES
-    ('Vinicius', 'Junior', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Real Madrid\VJ.webp', 'AT', 4),
-    ('Joselu', NULL, 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Real Madrid\J.webp', 'AT', 4),
-    ('Bellingham', 'Jude', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Real Madrid\JB.webp', 'M', 4),
-    ('Camavinga', 'Eduardo', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Real Madrid\EC.webp', 'M', 4),
-    ('Tchouameni', 'Aurélien', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Real Madrid\AT.webp', 'M', 4),
-    ('Valverde', 'Federico', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Real Madrid\FV.webp', 'M', 4),
-    ('Garcia', 'Fran', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Real Madrid\FG.webp', 'D', 4),
-    ('Alaba', 'David', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Real Madrid\DA.webp', 'D', 4),
-    ('Rudiger', 'Antonio', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Real Madrid\AR.webp', 'D', 4),
-    ('Carvajal', 'Dani', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Real Madrid\DC.webp', 'D', 4),
-    ('Kepa', NULL, 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Real Madrid\AK.webp', 'G', 4);
+  ('Vinicius', 'Junior', 'ressources/PhotoJoueur/RealMadrid/VJ.webp', 'AT', 4),
+  ('Joselu', NULL, 'ressources/PhotoJoueur/RealMadrid/J.webp', 'AT', 4),
+  ('Bellingham', 'Jude', 'ressources/PhotoJoueur/RealMadrid/JB.webp', 'M', 4),
+  ('Camavinga', 'Eduardo', 'ressources/PhotoJoueur/RealMadrid/EC.webp', 'M', 4),
+  ('Tchouameni', 'Aurélien', 'ressources/PhotoJoueur/RealMadrid/AT.webp', 'M', 4),
+  ('Valverde', 'Federico', 'ressources/PhotoJoueur/RealMadrid/FV.webp', 'M', 4),
+  ('Garcia', 'Fran', 'ressources/PhotoJoueur/RealMadrid/FG.webp', 'D', 4),
+  ('Alaba', 'David', 'ressources/PhotoJoueur/RealMadrid/DA.webp', 'D', 4),
+  ('Rudiger', 'Antonio', 'ressources/PhotoJoueur/RealMadrid/AR.webp', 'D', 4),
+  ('Carvajal', 'Dani', 'ressources/PhotoJoueur/RealMadrid/DC.webp', 'D', 4),
+  ('Kepa', NULL, 'ressources/PhotoJoueur/RealMadrid/AK.webp', 'G', 4);
 
-
+-- Chelsea
 INSERT INTO Joueur (nom, prenom, photo, poste, idClub)
 VALUES
-    ('Mudryk', 'Mykhailo', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Chelsea\MM.webp', 'AT', 5),
-    ('Fernández', 'Enzo', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Chelsea\EJF.webp', 'M', 5),
-    ('Sterling', 'Raheem', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Chelsea\RS.webp', 'AT', 5),
-    ('Jackson', 'Nicolas', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Chelsea\NJ.webp', 'AT', 5),
-    ('Caicedo', 'Moisés', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Chelsea\MC.webp', 'M', 5),
-    ('Gallagher', 'Conor', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Chelsea\CG.webp', 'M', 5),
-    ('Cucurella', 'Marc', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Chelsea\MC.webp', 'D', 5),
-    ('Colwill', 'Levi', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Chelsea\LSC.webp', 'D', 5),
-    ('Silva', 'Thiago', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Chelsea\TS.webp', 'D', 5),
-    ('Gusto', 'Malo', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Chelsea\MG.webp', 'D', 5),
-    ('Sánchez', 'Robert', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Chelsea\RS.webp', 'G', 5);
+  ('Mudryk', 'Mykhailo', 'ressources/PhotoJoueur/Chelsea/MM.webp', 'AT', 5),
+  ('Fernández', 'Enzo', 'ressources/PhotoJoueur/Chelsea/EJF.webp', 'M', 5),
+  ('Sterling', 'Raheem', 'ressources/PhotoJoueur/Chelsea/RS.webp', 'AT', 5),
+  ('Jackson', 'Nicolas', 'ressources/PhotoJoueur/Chelsea/NJ.webp', 'AT', 5),
+  ('Caicedo', 'Moisés', 'ressources/PhotoJoueur/Chelsea/MC.webp', 'M', 5),
+  ('Gallagher', 'Conor', 'ressources/PhotoJoueur/Chelsea/CG.webp', 'M', 5),
+  ('Cucurella', 'Marc', 'ressources/PhotoJoueur/Chelsea/MC.webp', 'D', 5),
+  ('Colwill', 'Levi', 'ressources/PhotoJoueur/Chelsea/LSC.webp', 'D', 5),
+  ('Silva', 'Thiago', 'ressources/PhotoJoueur/Chelsea/TS.webp', 'D', 5),
+  ('Gusto', 'Malo', 'ressources/PhotoJoueur/Chelsea/MG.webp', 'D', 5),
+  ('Sánchez', 'Robert', 'ressources/PhotoJoueur/Chelsea/RS.webp', 'G', 5);
 
+-- Barcelone
 INSERT INTO Joueur (nom, prenom, photo, poste, idClub)
 VALUES
-  ('Félix', 'João', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Barcelone\JF.webp', 'AT', 6),
-  ('Lewandowski', 'Robert', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Barcelone\RL.webp', 'AT', 6),
-  ('Yamal', 'Lamine', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Barcelone\LY.webp', 'AT', 6),
-  ('Gündoğan', 'İlkay', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Barcelone\IG.webp', 'M', 6),
-  ('Romeu', 'Oriol', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Barcelone\OR.webp', 'M', 6),
-  ('Gavi', '', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Barcelone\PMPG.webp', 'M', 6),
-  ('Baldé', '', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Barcelone\ABM.webp', 'D', 6),
-  ('Christensen', 'Andreas', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Barcelone\AC.webp', 'D', 6),
-  ('Koundé', 'Jules', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Barcelone\JK.webp', 'D', 6),
-  ('Cancelo', 'João', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Barcelone\JC.webp', 'D', 6),
-  ('ter Stegen', 'Marc-André', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Barcelone\MAT.webp', 'G', 6);
+  ('Félix', 'João', 'ressources/PhotoJoueur/Barcelone/JF.webp', 'AT', 6),
+  ('Lewandowski', 'Robert', 'ressources/PhotoJoueur/Barcelone/RL.webp', 'AT', 6),
+  ('Yamal', 'Lamine', 'ressources/PhotoJoueur/Barcelone/LY.webp', 'AT', 6),
+  ('Gündoğan', 'İlkay', 'ressources/PhotoJoueur/Barcelone/IG.webp', 'M', 6),
+  ('Romeu', 'Oriol', 'ressources/PhotoJoueur/Barcelone/OR.webp', 'M', 6),
+  ('Gavi', '', 'ressources/PhotoJoueur/Barcelone/PMPG.webp', 'M', 6),
+  ('Baldé', '', 'ressources/PhotoJoueur/Barcelone/ABM.webp', 'D', 6),
+  ('Christensen', 'Andreas', 'ressources/PhotoJoueur/Barcelone/AC.webp', 'D', 6),
+  ('Koundé', 'Jules', 'ressources/PhotoJoueur/Barcelone/JK.webp', 'D', 6),
+  ('Cancelo', 'João', 'ressources/PhotoJoueur/Barcelone/JC.webp', 'D', 6),
+  ('ter Stegen', 'Marc-André', 'ressources/PhotoJoueur/Barcelone/MAT.webp', 'G', 6);
 
-
-  
+-- PSG
 INSERT INTO Joueur (nom, prenom, photo, poste, idClub)
 VALUES
-  ('Mbappé', 'Kylian', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\PSG\KM.webp', 'AT', 7),
-  ('Ramos', 'Goncalo', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\PSG\GM.webp', 'AT', 7),
-  ('Dembélé', 'Ousmane', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\PSG\OD.webp', 'AT', 7),
-  ('Vitinha', '', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\PSG\VF.webp', 'M', 7),
-  ('Ugarte', 'Manuel', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\PSG\MU.webp', 'M', 7),
-  ('Zaire-Emery', 'Warren', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\PSG\WZ.webp', 'M', 7),
-  ('Hernández', 'Lucas', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\PSG\LH.webp', 'D', 7),
-  ('Skriniar', 'Milan', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\PSG\MS.webp', 'D', 7),
-  ('Marquinhos', '', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\PSG\M.webp', 'D', 7),
-  ('Hakimi', 'Achraf', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\PSG\AH.webp', 'D', 7),
-  ('Donnarumma', 'Gianluigi', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\PSG\GD.webp', 'G', 7);
+  ('Mbappé', 'Kylian', 'ressources/PhotoJoueur/PSG/KM.webp', 'AT', 7),
+  ('Ramos', 'Goncalo', 'ressources/PhotoJoueur/PSG/GM.webp', 'AT', 7),
+  ('Dembélé', 'Ousmane', 'ressources/PhotoJoueur/PSG/OD.webp', 'AT', 7),
+  ('Vitinha', '', 'ressources/PhotoJoueur/PSG/VF.webp', 'M', 7),
+  ('Ugarte', 'Manuel', 'ressources/PhotoJoueur/PSG/MU.webp', 'M', 7),
+  ('Zaire-Emery', 'Warren', 'ressources/PhotoJoueur/PSG/WZ.webp', 'M', 7),
+  ('Hernández', 'Lucas', 'ressources/PhotoJoueur/PSG/LH.webp', 'D', 7),
+  ('Skriniar', 'Milan', 'ressources/PhotoJoueur/PSG/MS.webp', 'D', 7),
+  ('Marquinhos', '', 'ressources/PhotoJoueur/PSG/M.webp', 'D', 7),
+  ('Hakimi', 'Achraf', 'ressources/PhotoJoueur/PSG/AH.webp', 'D', 7),
+  ('Donnarumma', 'Gianluigi', 'ressources/PhotoJoueur/PSG/GD.webp', 'G', 7);
 
-
+-- Juventus
 INSERT INTO Joueur (nom, prenom, photo, poste, idClub)
 VALUES
-    ('Chiesa', 'Federico', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Juventus\FC.webp', 'AT', 8),
-    ('Kostić', 'Filip', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Juventus\FK.webp', 'M', 8),
-    ('Rabiot', 'Adrien', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Juventus\AR.webp', 'M', 8),
-    ('Locatelli', 'Manuel', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Juventus\ML.webp', 'M', 8),
-    ('Miretti', 'Fabio', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Juventus\FM.webp', 'M', 8),
-    ('McKennie', 'Weston', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Juventus\WM.webp', 'M', 8),
-    ('Danilo', NULL, 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Juventus\PD.webp', 'D', 8),
-    ('Bremer', 'Gleison', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Juventus\GBSN.webp', 'D', 8),
-    ('Gatti', 'Federico', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Juventus\FG.webp', 'D', 8),
-    ('Vlahović', 'Dušan', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Juventus\DV.webp', 'AT', 8);
+  ('Chiesa', 'Federico', 'ressources/PhotoJoueur/Juventus/FC.webp', 'AT', 8),
+  ('Kostić', 'Filip', 'ressources/PhotoJoueur/Juventus/FK.webp', 'M', 8),
+  ('Rabiot', 'Adrien', 'ressources/PhotoJoueur/Juventus/AR.webp', 'M', 8),
+  ('Locatelli', 'Manuel', 'ressources/PhotoJoueur/Juventus/ML.webp', 'M', 8),
+  ('Miretti', 'Fabio', 'ressources/PhotoJoueur/Juventus/FM.webp', 'M', 8),
+  ('McKennie', 'Weston', 'ressources/PhotoJoueur/Juventus/WM.webp', 'M', 8),
+  ('Danilo', NULL, 'ressources/PhotoJoueur/Juventus/PD.webp', 'D', 8),
+  ('Bremer', 'Gleison', 'ressources/PhotoJoueur/Juventus/GBSN.webp', 'D', 8),
+  ('Gatti', 'Federico', 'ressources/PhotoJoueur/Juventus/FG.webp', 'D', 8),
+  ('Vlahović', 'Dušan', 'ressources/PhotoJoueur/Juventus/DV.webp', 'AT', 8);
 
 
 INSERT INTO Joueur (nom, prenom, photo, poste, idClub)
