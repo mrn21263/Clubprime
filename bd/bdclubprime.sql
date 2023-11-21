@@ -65,11 +65,6 @@ CREATE TABLE IF NOT EXISTS Classement (
     PRIMARY KEY (annee, idClub)
 );
 
--- Création de la table Tag
-CREATE TABLE IF NOT EXISTS Tag (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    lib VARCHAR(277) NOT NULL
-);
 
 -- Création de la table Obtenir (association entre Clubs et Trophées)
 CREATE TABLE IF NOT EXISTS Obtenir (
@@ -79,15 +74,6 @@ CREATE TABLE IF NOT EXISTS Obtenir (
     PRIMARY KEY (idClub, idTrophee),
     FOREIGN KEY (idClub) REFERENCES Club(id),
     FOREIGN KEY (idTrophee) REFERENCES Trophee(id)
-);
-
--- Création de la table Taguer (association entre Clubs et Tags)
-CREATE TABLE IF NOT EXISTS Taguer (
-    idClub INT,
-    idTag INT,
-    PRIMARY KEY (idClub, idTag),
-    FOREIGN KEY (idClub) REFERENCES Club(id),
-    FOREIGN KEY (idTag) REFERENCES Tag(id)
 );
 
 -- Création de la table Logo
