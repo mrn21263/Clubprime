@@ -5,7 +5,7 @@ DROP DATABASE IF EXISTS bdClubPrime;
 CREATE DATABASE bdClubPrime;
 
 -- Utiliser la base de données
-USE bdClubPrime;
+USE id21551042_clubprime;
 
 -- Création de la table Club
 CREATE TABLE IF NOT EXISTS Club (
@@ -134,8 +134,8 @@ INSERT INTO Trophee (nom, photoTrophee) VALUES
 ('Copa del Rey', 'ressources/PhotoTrophee/CopaDelRey.png'),
 ('Supercopa de España', 'ressources/PhotoTrophee/SupercopaDeEspana.png'),
 ('Ligue des Champions de l''UEFA', 'ressources/PhotoTrophee/LigueDesChampions.png'),
-('Ligue Europa de l\''UEFA', 'ressources/PhotoTrophee/LigueEuropa.png'),
-('Supercoupe de l\''UEFA', 'ressources/PhotoTrophee/SupercoupeUEFA.png'),
+('Ligue Europa de l\'UEFA', 'ressources/PhotoTrophee/LigueEuropa.png'),
+('Supercoupe de l\'UEFA', 'ressources/PhotoTrophee/SupercoupeUEFA.png'),
 ('Fifa Club World Cup', 'ressources/PhotoTrophee/FifaClubWorldCup.png'),
 ('Audi Cup', 'ressources/PhotoTrophee/AudiCup.png'),
 ('Premier League Asia Trophy', 'ressources/PhotoTrophee/PremierLeagueAsiaTrophy.png'),
@@ -524,5 +524,3 @@ INSERT INTO Logo VALUES
     (1997, 11, '1997-2013', 'ressources/LogoEquipe/Roma/1997-2013.png'),
     (2013, 11, '2013-2017', 'ressources/LogoEquipe/Roma/2013-2017.png'),
     (2017, 11, '2017-Actuel', 'ressources/LogoEquipe/Roma/2017-Actuel.png');
--- Sélectionnez tous les enregistrements de la table Club
-SELECT * FROM Club;
