@@ -310,18 +310,18 @@ VALUES
   ('Alvarez', 'Julian', 'ressources/PhotoJoueur/ManCity/JA.webp', 'AT', 3),
   ('Foden', 'Phil', 'ressources/PhotoJoueur/ManCity/PF.webp', 'M', 3),
   ('Kovačić', 'Mateo', 'ressources/PhotoJoueur/ManCity/MK.webp', 'M', 3),
-  ('Rodri', NULL, 'ressources/PhotoJoueur/ManCity/HR.webp', 'M', 3),
+  ('Rodri', '', 'ressources/PhotoJoueur/ManCity/HR.webp', 'M', 3),
   ('Gvardiol', 'Josko', 'ressources/PhotoJoueur/ManCity/JG2.webp', 'D', 3),
   ('Dias', 'Rúben', 'ressources/PhotoJoueur/ManCity/RD.webp', 'D', 3),
   ('Akanji', 'Manuel', 'ressources/PhotoJoueur/ManCity/MA.webp', 'D', 3),
   ('Walker', 'Kyle', 'ressources/PhotoJoueur/ManCity/KW.webp', 'D', 3),
-  ('Ederson', NULL, 'ressources/PhotoJoueur/ManCity/E.webp', 'G', 3);
+  ('Ederson', '', 'ressources/PhotoJoueur/ManCity/E.webp', 'G', 3);
 
 -- Real Madrid
 INSERT INTO Joueur (nom, prenom, photo, poste, idClub)
 VALUES
   ('Vinicius', 'Junior', 'ressources/PhotoJoueur/RealMadrid/VJ.webp', 'AT', 4),
-  ('Joselu', NULL, 'ressources/PhotoJoueur/RealMadrid/J.webp', 'AT', 4),
+  ('Joselu', '', 'ressources/PhotoJoueur/RealMadrid/J.webp', 'AT', 4),
   ('Bellingham', 'Jude', 'ressources/PhotoJoueur/RealMadrid/JB.webp', 'M', 4),
   ('Camavinga', 'Eduardo', 'ressources/PhotoJoueur/RealMadrid/EC.webp', 'M', 4),
   ('Tchouameni', 'Aurélien', 'ressources/PhotoJoueur/RealMadrid/AT.webp', 'M', 4),
@@ -330,7 +330,7 @@ VALUES
   ('Alaba', 'David', 'ressources/PhotoJoueur/RealMadrid/DA.webp', 'D', 4),
   ('Rudiger', 'Antonio', 'ressources/PhotoJoueur/RealMadrid/AR.webp', 'D', 4),
   ('Carvajal', 'Dani', 'ressources/PhotoJoueur/RealMadrid/DC.webp', 'D', 4),
-  ('Kepa', NULL, 'ressources/PhotoJoueur/RealMadrid/AK.webp', 'G', 4);
+  ('Kepa', '', 'ressources/PhotoJoueur/RealMadrid/AK.webp', 'G', 4);
 
 -- Chelsea
 INSERT INTO Joueur (nom, prenom, photo, poste, idClub)
@@ -386,7 +386,7 @@ VALUES
   ('Locatelli', 'Manuel', 'ressources/PhotoJoueur/Juventus/ML.webp', 'M', 8),
   ('Miretti', 'Fabio', 'ressources/PhotoJoueur/Juventus/FM.webp', 'M', 8),
   ('McKennie', 'Weston', 'ressources/PhotoJoueur/Juventus/WM.webp', 'M', 8),
-  ('Danilo', NULL, 'ressources/PhotoJoueur/Juventus/PD.webp', 'D', 8),
+  ('Danilo', '', 'ressources/PhotoJoueur/Juventus/PD.webp', 'D', 8),
   ('Bremer', 'Gleison', 'ressources/PhotoJoueur/Juventus/GBSN.webp', 'D', 8),
   ('Gatti', 'Federico', 'ressources/PhotoJoueur/Juventus/FG.webp', 'D', 8),
   ('Vlahović', 'Dušan', 'ressources/PhotoJoueur/Juventus/DV.webp', 'AT', 8);
@@ -395,7 +395,7 @@ INSERT INTO Joueur (nom, prenom, photo, poste, idClub)
 VALUES
     ('Morata', 'Álvaro', 'ressources/PhotoJoueur/AtleticoMadrid/AM.webp', 'AT', 9),
     ('Ñíguez', 'Saúl', 'ressources/PhotoJoueur/AtleticoMadrid/SN.webp', 'M', 9),
-    ('Koke', NULL, 'ressources/PhotoJoueur/AtleticoMadrid/KR.webp', 'M', 9),
+    ('Koke', '', 'ressources/PhotoJoueur/AtleticoMadrid/KR.webp', 'M', 9),
     ('Griezmann', 'Antoine', 'ressources/PhotoJoueur/AtleticoMadrid/AG.webp', 'AT', 9),
     ('Llorente', 'Marcos', 'ressources/PhotoJoueur/AtleticoMadrid/ML.webp', 'M', 9),
     ('Riquelme', 'Rodrigo', 'ressources/PhotoJoueur/AtleticoMadrid/RRR.webp', 'M', 9),
@@ -409,9 +409,9 @@ INSERT INTO Joueur (nom, prenom, photo, poste, idClub)
 VALUES
     ('Rashford', 'Marcus', 'ressources/PhotoJoueur/Man United/MR.webp', 'AT', 10),
     ('Fernandes', 'Bruno', 'ressources/PhotoJoueur/Man United/BF.webp', 'M', 10),
-    ('Antony', NULL, 'ressources/PhotoJoueur/Man United/A.webp', 'AT', 10),
+    ('Antony', '', 'ressources/PhotoJoueur/Man United/A.webp', 'AT', 10),
     ('Eriksen', 'Christian', 'ressources/PhotoJoueur/Man United/CE.webp', 'M', 10),
-    ('Casemiro', NULL, 'ressources/PhotoJoueur/Man United/HC.webp', 'M', 10),
+    ('Casemiro', '', 'ressources/PhotoJoueur/Man United/HC.webp', 'M', 10),
     ('Dalot', 'Diogo', 'ressources/PhotoJoueur/Man United/DD.webp', 'D', 10),
     ('Evans', 'Jonny', 'ressources/PhotoJoueur/Man United/JE.webp', 'D', 10),
     ('Maguire', 'Harry', 'ressources/PhotoJoueur/Man United/HM.webp', 'D', 10),
