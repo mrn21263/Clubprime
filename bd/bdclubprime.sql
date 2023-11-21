@@ -445,7 +445,7 @@ INSERT INTO Logo VALUES
     (1967, 1, '1967-1997', 'ressources/LogoEquipe/Bayern/1967-1997.png'),
     (1997, 1, '1997-2002', 'ressources/LogoEquipe/Bayern/1997-2002.png'),
     (2002, 1, '2002-2017', 'ressources/LogoEquipe/Bayern/2002-2017.png'),
-    (2017, 1, '2017-Actuel', 'ressources/LogoEquipe/Bayern/2017.png');
+    (2017, 1, '2017-Actuel', 'ressources/LogoEquipe/Bayern/2017-Actuel.png');
 
 INSERT INTO Logo VALUES 
     (1981, 2, '1981-1987', 'ressources/LogoEquipe/Liverpool/1981-1987.gif'),
