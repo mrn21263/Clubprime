@@ -15,7 +15,7 @@ CREATE TABLE IF NOT EXISTS Club (
     descr VARCHAR(277),
     dateCrea DATE,
     idLigue INT,
-    descrStade VARCHAR(277),
+    descrStade VARCHAR(2757),
     photoStade VARCHAR(277),
     entraineur VARCHAR(277),
     photoEntraineur VARCHAR(277),
