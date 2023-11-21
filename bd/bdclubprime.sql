@@ -405,62 +405,62 @@ VALUES
   ('Gatti', 'Federico', 'ressources/PhotoJoueur/Juventus/FG.webp', 'D', 8),
   ('Vlahović', 'Dušan', 'ressources/PhotoJoueur/Juventus/DV.webp', 'AT', 8);
 
+INSERT INTO Joueur (nom, prenom, photo, poste, idClub)
+VALUES
+    ('Morata', 'Álvaro', 'ressources/PhotoJoueur/AtleticoMadrid/AM.webp', 'AT', 9),
+    ('Ñíguez', 'Saúl', 'ressources/PhotoJoueur/AtleticoMadrid/SN.webp', 'M', 9),
+    ('Koke', NULL, 'ressources/PhotoJoueur/AtleticoMadrid/KR.webp', 'M', 9),
+    ('Griezmann', 'Antoine', 'ressources/PhotoJoueur/AtleticoMadrid/AG.webp', 'AT', 9),
+    ('Llorente', 'Marcos', 'ressources/PhotoJoueur/AtleticoMadrid/ML.webp', 'M', 9),
+    ('Riquelme', 'Rodrigo', 'ressources/PhotoJoueur/AtleticoMadrid/RRR.webp', 'M', 9),
+    ('Molina', 'Nahuel', 'ressources/PhotoJoueur/AtleticoMadrid/NML.webp', 'D', 9),
+    ('Hermoso', 'Mario', 'ressources/PhotoJoueur/AtleticoMadrid/MH.webp', 'D', 9),
+    ('Witsel', 'Axel', 'ressources/PhotoJoueur/AtleticoMadrid/AW.webp', 'M', 9),
+    ('Savić', 'Stefan', 'ressources/PhotoJoueur/AtleticoMadrid/SS.webp', 'D', 9),
+    ('Oblak', 'Jan', 'ressources/PhotoJoueur/AtleticoMadrid/JO.webp', 'G', 9);
 
 INSERT INTO Joueur (nom, prenom, photo, poste, idClub)
 VALUES
-    ('Morata', 'Álvaro', 'resources/PhotoJoueur/AtleticoMadrid/AM.webp', 'AT', 9),
-    ('Ñíguez', 'Saúl', 'resources/PhotoJoueur/AtleticoMadrid/SN.webp', 'M', 9),
-    ('Koke', NULL, 'resources/PhotoJoueur/AtleticoMadrid/KR.webp', 'M', 9),
-    ('Griezmann', 'Antoine', 'resources/PhotoJoueur/AtleticoMadrid/AG.webp', 'AT', 9),
-    ('Llorente', 'Marcos', 'resources/PhotoJoueur/AtleticoMadrid/ML.webp', 'M', 9),
-    ('Riquelme', 'Rodrigo', 'resources/PhotoJoueur/AtleticoMadrid/RRR.webp', 'M', 9),
-    ('Molina', 'Nahuel', 'resources/PhotoJoueur/AtleticoMadrid/NML.webp', 'D', 9),
-    ('Hermoso', 'Mario', 'resources/PhotoJoueur/AtleticoMadrid/MH.webp', 'D', 9),
-    ('Witsel', 'Axel', 'resources/PhotoJoueur/AtleticoMadrid/AW.webp', 'M', 9),
-    ('Savić', 'Stefan', 'resources/PhotoJoueur/AtleticoMadrid/SS.webp', 'D', 9),
-    ('Oblak', 'Jan', 'resources/PhotoJoueur/AtleticoMadrid/JO.webp', 'G', 9);
+    ('Rashford', 'Marcus', 'ressources/PhotoJoueur/Man United/MR.webp', 'AT', 10),
+    ('Fernandes', 'Bruno', 'ressources/PhotoJoueur/Man United/BF.webp', 'M', 10),
+    ('Antony', NULL, 'ressources/PhotoJoueur/Man United/A.webp', 'AT', 10),
+    ('Eriksen', 'Christian', 'ressources/PhotoJoueur/Man United/CE.webp', 'M', 10),
+    ('Casemiro', NULL, 'ressources/PhotoJoueur/Man United/HC.webp', 'M', 10),
+    ('Dalot', 'Diogo', 'ressources/PhotoJoueur/Man United/DD.webp', 'D', 10),
+    ('Evans', 'Jonny', 'ressources/PhotoJoueur/Man United/JE.webp', 'D', 10),
+    ('Maguire', 'Harry', 'ressources/PhotoJoueur/Man United/HM.webp', 'D', 10),
+    ('Wan-Bissaka', 'Aaron', 'ressources/PhotoJoueur/Man United/AB.webp', 'D', 10),
+    ('Onana', 'André', 'ressources/PhotoJoueur/Man United/AO.webp', 'G', 10),
+    ('Højlund', 'Rasmus', 'ressources/PhotoJoueur/Man United/RH.webp', 'AT', 10);
 
 INSERT INTO Joueur (nom, prenom, photo, poste, idClub)
 VALUES
-    ('Rashford', 'Marcus', 'resources/PhotoJoueur/Man United/MR.webp', 'AT', 10),
-    ('Fernandes', 'Bruno', 'resources/PhotoJoueur/Man United/BF.webp', 'M', 10),
-    ('Antony', NULL, 'resources/PhotoJoueur/Man United/A.webp', 'AT', 10),
-    ('Eriksen', 'Christian', 'resources/PhotoJoueur/Man United/CE.webp', 'M', 10),
-    ('Casemiro', NULL, 'resources/PhotoJoueur/Man United/HC.webp', 'M', 10),
-    ('Dalot', 'Diogo', 'resources/PhotoJoueur/Man United/DD.webp', 'D', 10),
-    ('Evans', 'Jonny', 'resources/PhotoJoueur/Man United/JE.webp', 'D', 10),
-    ('Maguire', 'Harry', 'resources/PhotoJoueur/Man United/HM.webp', 'D', 10),
-    ('Wan-Bissaka', 'Aaron', 'resources/PhotoJoueur/Man United/AB.webp', 'D', 10),
-    ('Onana', 'André', 'resources/PhotoJoueur/Man United/AO.webp', 'G', 10),
-    ('Højlund', 'Rasmus', 'resources/PhotoJoueur/Man United/RH.webp', 'AT', 10);
-
-INSERT INTO Joueur (nom, prenom, photo, poste, idClub)
-VALUES
-    ('Lukaku', 'Romelu', 'resources/PhotoJoueur/Roma/RL.webp', 'AT', 11),
-    ('Dybala', 'Paulo', 'resources/PhotoJoueur/Roma/PD.webp', 'AT', 11),
-    ('Zalewski', 'Nicola', 'resources/PhotoJoueur/Roma/NZ.webp', 'M', 11),
-    ('Aouar', 'Houssem', 'resources/PhotoJoueur/Roma/HA.webp', 'M', 11),
-    ('Paredes', 'Leandro', 'resources/PhotoJoueur/Roma/LP.webp', 'M', 11),
-    ('Cristante', 'Bryan', 'resources/PhotoJoueur/Roma/BC.webp', 'M', 11),
-    ('Kristensen', 'Rasmus', 'resources/PhotoJoueur/Roma/RK.webp', 'D', 11),
-    ('Nidcka', 'Emil', 'resources/PhotoJoueur/Roma/EN.webp', 'D', 11),
-    ('Llorente', 'Diego', 'resources/PhotoJoueur/Roma/DL.webp', 'D', 11),
-    ('Mancini', 'Gianluca', 'resources/PhotoJoueur/Roma/GM.webp', 'D', 11),
-    ('Patricio', 'Rui', 'resources/PhotoJoueur/Roma/RP.webp', 'G', 11);
+    ('Lukaku', 'Romelu', 'ressources/PhotoJoueur/Roma/RL.webp', 'AT', 11),
+    ('Dybala', 'Paulo', 'ressources/PhotoJoueur/Roma/PD.webp', 'AT', 11),
+    ('Zalewski', 'Nicola', 'ressources/PhotoJoueur/Roma/NZ.webp', 'M', 11),
+    ('Aouar', 'Houssem', 'ressources/PhotoJoueur/Roma/HA.webp', 'M', 11),
+    ('Paredes', 'Leandro', 'ressources/PhotoJoueur/Roma/LP.webp', 'M', 11),
+    ('Cristante', 'Bryan', 'ressources/PhotoJoueur/Roma/BC.webp', 'M', 11),
+    ('Kristensen', 'Rasmus', 'ressources/PhotoJoueur/Roma/RK.webp', 'D', 11),
+    ('Nidcka', 'Emil', 'ressources/PhotoJoueur/Roma/EN.webp', 'D', 11),
+    ('Llorente', 'Diego', 'ressources/PhotoJoueur/Roma/DL.webp', 'D', 11),
+    ('Mancini', 'Gianluca', 'ressources/PhotoJoueur/Roma/GM.webp', 'D', 11),
+    ('Patricio', 'Rui', 'ressources/PhotoJoueur/Roma/RP.webp', 'G', 11);
 
 
 INSERT INTO Logo VALUES 
-    (1900, 1, '1900-1901', 'Z:/TS2SIO SLAM/Kraria Samih/Projet SLAM/Projet ClubPrime/Logo/Bayern/1900-1901.png'),
-    (1902, 1, '1902-1906', 'Z:/TS2SIO SLAM/Kraria Samih/Projet SLAM/Projet ClubPrime/Logo/Bayern/1902-1906.png'),
-    (1906, 1, '1906-1908', 'Z:/TS2SIO SLAM/Kraria Samih/Projet SLAM/Projet ClubPrime/Logo/Bayern/1906-1908.png'),
-    (1919, 1, '1919-1920', 'Z:/TS2SIO SLAM/Kraria Samih/Projet SLAM/Projet ClubPrime/Logo/Bayern/1919-1920.png'),
-    (1931, 1, '1931-1935', 'Z:/TS2SIO SLAM/Kraria Samih/Projet SLAM/Projet ClubPrime/Logo/Bayern/1931-1935.png'),
-    (1955, 1, '1955-1966', 'Z:/TS2SIO SLAM/Kraria Samih/Projet SLAM/Projet ClubPrime/Logo/Bayern/1955-1966.gif'),
-    (1966, 1, '1966-1967', 'Z:/TS2SIO SLAM/Kraria Samih/Projet SLAM/Projet ClubPrime/Logo/Bayern/1966-1967.gif'),
-    (1967, 1, '1967-1997', 'Z:/TS2SIO SLAM/Kraria Samih/Projet SLAM/Projet ClubPrime/Logo/Bayern/1967-1997.png'),
-    (1997, 1, '1997-2002', 'Z:/TS2SIO SLAM/Kraria Samih/Projet SLAM/Projet ClubPrime/Logo/Bayern/1997-2002.png'),
-    (2002, 1, '2002-2017', 'Z:/TS2SIO SLAM/Kraria Samih/Projet SLAM/Projet ClubPrime/Logo/Bayern/2002-2017.png'),
-    (2017, 1, '2017-Actuel', 'Z:/TS2SIO SLAM/Kraria Samih/Projet SLAM/Projet ClubPrime/Logo/Bayern/2017.png'),
+    (1900, 1, '1900-1901', 'ressources/LogoEquipe/Bayern/1900-1901.png'),
+    (1902, 1, '1902-1906', 'ressources/LogoEquipe/Bayern/1902-1906.png'),
+    (1906, 1, '1906-1908', 'ressources/LogoEquipe/Bayern/1906-1908.png'),
+    (1919, 1, '1919-1920', 'ressources/LogoEquipe/Bayern/1919-1920.png'),
+    (1931, 1, '1931-1935', 'ressources/LogoEquipe/Bayern/1931-1935.png'),
+    (1955, 1, '1955-1966', 'ressources/LogoEquipe/Bayern/1955-1966.gif'),
+    (1966, 1, '1966-1967', 'ressources/LogoEquipe/Bayern/1966-1967.gif'),
+    (1967, 1, '1967-1997', 'ressources/LogoEquipe/Bayern/1967-1997.png'),
+    (1997, 1, '1997-2002', 'ressources/LogoEquipe/Bayern/1997-2002.png'),
+    (2002, 1, '2002-2017', 'ressources/LogoEquipe/Bayern/2002-2017.png'),
+    (2017, 1, '2017-Actuel', 'ressources/LogoEquipe/Bayern/2017.png');
+
 
     (1981, 2, '1981-1987', 'Z:/TS2SIO SLAM/KRARIA Samih/Projet SLAM/Projet ClubPrime/Logo/Liverpool/1981-1987.gif'),
     (1987, 2, '1987-1992', 'Z:/TS2SIO SLAM/KRARIA Samih/Projet SLAM/Projet ClubPrime/Logo/Liverpool/1987-1992.gif'),
