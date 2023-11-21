@@ -331,8 +331,6 @@ VALUES
   ('Walker', 'Kyle', 'ressources/PhotoJoueur/ManCity/KW.webp', 'D', 3),
   ('Ederson', NULL, 'ressources/PhotoJoueur/ManCity/E.webp', 'G', 3);
 
-
-
 INSERT INTO Joueur (nom, prenom, photo, poste, idClub)
 VALUES
     ('Vinicius', 'Junior', 'E:\SIO\Developpement\AP\Club Prime\Photo Joueur - Formation\Real Madrid\VJ.webp', 'AT', 4),
