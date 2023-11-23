@@ -8,7 +8,8 @@ Page d'accueil :
         Troisieme :
             Select max(photologo),club.nom from logo Inner join club on club.id = logo.idClub inner join classement on classement.idClub = club.id where classement.annee = 2022 and position = 3;
     Classement :
-    
+        Select max(photologo),club.nom from logo Inner join club on club.id = logo.idClub inner join classement on classement.idClub = club.id where classement.annee = 2022 ORDER by position;
+
 
 select nom from club where id = 1;
 
