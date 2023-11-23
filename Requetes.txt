@@ -1,4 +1,15 @@
 USE id21551042_clubprime;
+Page d'accueil : 
+    Prodium :
+        Premier :  
+            Select max(photologo),club.nom from logo Inner join club on club.id = logo.idClub inner join classement on classement.idClub = club.id where classement.annee = 2022 and poistion = 1
+        Deuxieme :
+            Select max(photologo),club.nom from logo Inner join club on club.id = logo.idClub inner join classement on classement.idClub = club.id where classement.annee = 2022 and position = 2;
+        Troisieme :
+            Select max(photologo),club.nom from logo Inner join club on club.id = logo.idClub inner join classement on classement.idClub = club.id where classement.annee = 2022 and position = 3;
+    Classement :
+    
+
 select nom from club where id = 1;
 
 select photoLigue from ligue Inner join club ON  club.idLigue = ligue.id where club.id = 1;
