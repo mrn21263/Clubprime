@@ -2,14 +2,16 @@ USE id21551042_clubprime;
 Page d'accueil : 
     Prodium :
         Premier :  
-            Select max(photologo),club.nom from logo Inner join club on club.id = logo.idClub inner join classement on classement.idClub = club.id where classement.annee = 2022 and poistion = 1
+            Select max(photologo),club.nom from logo Inner join club on club.id = logo.idClub inner join classement on classement.idClub = club.id where classement.annee = 2022 and poistion = 1;
+            Select photoClub from club inner join inner join classement on classement.idClub = club.id where position = 1;
         Deuxieme :
             Select max(photologo),club.nom from logo Inner join club on club.id = logo.idClub inner join classement on classement.idClub = club.id where classement.annee = 2022 and position = 2;
         Troisieme :
             Select max(photologo),club.nom from logo Inner join club on club.id = logo.idClub inner join classement on classement.idClub = club.id where classement.annee = 2022 and position = 3;
     Classement :
-        Select max(photologo),club.nom from logo Inner join club on club.id = logo.idClub inner join classement on classement.idClub = club.id where classement.annee = 2022 ORDER by position;
-
+        Select photologo,club.nom from logo Inner join club on club.id = logo.idClub inner join classement on classement.idClub = club.id where classement.annee = 2022 and photologo LIKE '%Actuel%' and position > 3 ORDER by position;
+    Footer : 
+        Select photologo From logo where photologo LIKE '%Actuel%';
 
 select nom from club where id = 1;
 
