@@ -20,7 +20,9 @@ body {
 }
 
 .login-container{
-    height: 40vh;
-    width: 40vh;
-    background-color:aliceblue
+    width: 465px;
+    height: 642px;
+    flex-shrink: 0;
+    border-radius : 25px;
+    background: #FFF;
 }
