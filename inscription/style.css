@@ -36,6 +36,8 @@ body {
 
 }
 .head-div img{
+    margin-top: 39px;
+    margin-bottom: 12px;
     width: 64px;
     height: 64px;
     flex-shrink: 0;
