@@ -13,7 +13,31 @@
       <h2>Se connecter</h2>
       <p> Saisir vos informations</p>
     </div>
-    <div class=""</div>
+    <!-- Formulaire de connexion -->
+    <form action="/submit-your-login-form" method="post">
+      <!-- Identifiant -->
+      <div class="champ-saisie identifiant">
+        <label for="identifiant" class="texte-bouton">Identifiant</label>
+        <input type="text" id="identifiant" name="identifiant" required>
+      </div>
+
+      <!-- Mot de passe -->
+      <div class="champ-saisie mdp">
+        <label for="motdepasse" class="texte-bouton">Mot de passe</label>
+        <input type="password" id="motdepasse" name="motdepasse" required>
+      </div>
+
+      <!-- Bouton de connexion -->
+      <div class="bouton-se-connecter">
+        <button type="submit" class="texte-bouton-se-connecter">Se connecter</button>
+      </div>
+
+      <!-- Lien pour créer un compte -->
+      <div class="bouton-cree-compte">
+        <a href="/creer-compte" class="texte-bouton">Créer un nouveau compte</a>
+      </div>
+    </form>
+  
 
 
 
