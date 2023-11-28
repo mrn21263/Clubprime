@@ -71,11 +71,28 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 200px;
+    height: 150px;
+    background-color: yellow;
 }
 
-.identifiant .id{
+.identifiant #id{
     margin-bottom: 21px;
+    border: 0px;
+    background-color: transparent;
+    border-bottom: 2px solid black;
+    width: 60%;
+}
+
+.identifiant #id::placeholder{
+    font-weight: bolder ;
+    color: black;
+    font-size: 15px;
+}
+
+.identifiant #motdepasse::placeholder{
+    font-weight: bolder ;
+    color: black;
+    font-size: 15px;
 }
 
 .bouton{
@@ -84,6 +101,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    background-color: chocolate;
 }
 
 .bouton-se-connecter{
