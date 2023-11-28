@@ -74,3 +74,30 @@ body {
     background-color: green;
     height: 200px;
 }
+
+.bouton{
+    background-color: aqua;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.bouton-se-connecter{
+    display: inline-flex;
+    padding: 0px 110px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    background: #1B1D21;
+}
+
+.bouton-creer-compte{
+    display: inline-flex;
+    padding: 0px 110px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    background: #1B1D21;
+}
