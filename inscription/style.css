@@ -69,12 +69,14 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: green;
     height: 200px;
 }
 
+.identifiant .id{
+    margin-bottom: 21px;
+}
+
 .bouton{
-    background-color: aqua;
     height: 150px;
     display: flex;
     align-items: center;
@@ -83,19 +85,42 @@ body {
 }
 
 .bouton-se-connecter{
+    width: 80%;
+    height: 5vh;
     display: inline-flex;
-    padding: 0px 110px;
     justify-content: center;
     align-items: center;
     border-radius: 50px;
     background: #1B1D21;
+    margin-bottom: 15px;
+}
+
+.bouton-se-connecter a{
+  color: white;
 }
 
 .bouton-creer-compte{
+    width: 80%;
+    height: 5vh;
     display: inline-flex;
-    padding: 0px 110px;
     justify-content: center;
     align-items: center;
     border-radius: 50px;
-    background: #1B1D21;
+    background: #D4D4D4;
+}
+
+.bouton-creer-compte a{
+    color: white;
+}
+
+.text-footer{
+    margin-top: 27px;
+    margin-left: 100px;
+    margin-right: 100px;
+    font-size: small;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    background-color: aqua;
+    flex-direction: column;
 }
