@@ -25,5 +25,10 @@ body {
     flex-shrink: 0;
     border-radius : 25px;
     background: #FFF;
+    display: flex;
+    flex-direction: column;
+}
 
+.identifiant{
+    background-color: green;
 }
