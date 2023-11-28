@@ -73,17 +73,17 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 150px;
+    height: 170px;
+    margin-top: 20px;
 }
 
 .identifiant #id{
-    margin-bottom: 21px;
+    margin-bottom: 15px;
     border: 0px;
     background-color: transparent;
     border-bottom: 1px solid black;
     width: 70%;
-    height: 30%;
-    margin-top: 15px;
+    height: 100%;
 }
 
 .identifiant #id::placeholder{
@@ -93,16 +93,30 @@ body {
 }
 
 
-.pass{
+.pass1{
     border-bottom: 1px solid black;
     width: 70%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 15px;
-    height: 30%;
+    height: 100%;
     justify-content: space-between;
     padding-right: 10px;
+    margin-top: 15px;
+}
+
+.pass2{
+    border-bottom: 1px solid black;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    height: 100%;
+    justify-content: space-between;
+    padding-right: 10px;
+    margin-top: 15px;
 }
 
 
@@ -132,7 +146,6 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin-top: 20px;
 }
 
 .bouton-se-connecter{
@@ -184,7 +197,7 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 50px;
-    background: #D4D4D4;
+    background: #1B1D21;
     margin-bottom: 15px;
 }
 .bouton-se-connecter-inscription{
@@ -194,13 +207,15 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 50px;
-    background: #1B1D21;
+    background: #D4D4D4;
     
 
 }
 .bouton-creer-compte-inscription a{
-    color: black;
+    color: white;
+    font-weight: bolder;
 }
 .bouton-se-connecter-inscription a{
-    color: white;
+    color: black;
+    font-weight: bolder;
 }
