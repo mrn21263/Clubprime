@@ -132,14 +132,6 @@ body {
     font-size: 18px;
 }
 
-.mdp-oublie{
-    margin-left: 170px;
-    margin-bottom: 15px;
-    font-size: x-small;
-    color: #424242;
-    overflow: hidden;
-}
-
 .bouton{
     height: 150px;
     display: flex;

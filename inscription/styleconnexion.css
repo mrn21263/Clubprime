@@ -126,6 +126,12 @@ body {
     overflow: hidden;
 }
 
+.mdp-oublie a:hover{
+    text-decoration: underline;
+    color: black;
+    font-weight: bolder;
+}
+
 .bouton{
     height: 150px;
     display: flex;
