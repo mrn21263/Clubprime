@@ -66,5 +66,10 @@ body {
     letter-spacing: 1.5px;
 }
 .identifiant{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     background-color: green;
+    height: 200px;
 }
