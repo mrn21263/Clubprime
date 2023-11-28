@@ -164,3 +164,24 @@ body {
     flex-direction: column;
     font-size: 10px;
 }
+
+.bouton-creer-compte-inscription{
+    width: 80%;
+    height: 5vh;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    background: #D4D4D4;
+    margin-bottom: 15px;
+}
+.bouton-se-connecter-inscription{
+    width: 80%;
+    height: 5vh;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    background: #1B1D21;
+
+}

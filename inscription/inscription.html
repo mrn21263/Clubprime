@@ -3,49 +3,48 @@
 <head>
   <meta charset="utf-8">
   <title>Titre de la page</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styleconnexion.css">
 </head>
 <body>
     <div class="login-container">
       <!-- Formulaire de connexion -->
       <div class="head-div">
         <img src="ressources/logoldc.svg" alt="Logo Ligue des champions">
-        <h2>Se connecter</h2>
+        <h2>S'inscrire</h2>
         <p> Saisir vos informations</p>
       </div>
       <!-- Formulaire de connexion -->
       <form action="/submit-your-login-form" method="post">
         <!-- Identifiant -->
         <div class="identifiant">
-      
           <input type="text" id="id" name="identifiant" placeholder="Identifiant" required>
-          <input type="password" id="motdepasse" name="motdepasse" placeholder="Mot de passe" required>
+          <div class="pass">
+            <input type="password" id="motdepasse" name="motdepasse" placeholder="Mot de passe" required > 
+            <img src="./ressources/logoldc.svg" alt="" width="20px">
+          </div>
+          <div class="pass">
+            <input type="password" id="motdepasse" name="motdepasse" placeholder="Mot de passe" required > 
+            <img src="./ressources/logoldc.svg" alt="" width="20px">
+          </div>
+          
         </div>
 
         <div class="bouton">
+          <div class="bouton-creer-compte-inscription">
+            <a href="">Créer un nouveau compte</a>
+          </div>
           <!-- Bouton de connexion -->
-          <div class="bouton-se-connecter">
+          <div class="bouton-se-connecter-inscription">
            <a href="">Se connecter</a>
           </div>
           <!-- Bouton de creation de compte -->
-          <div class="bouton-creer-compte">
-            <a href="">Créer un nouveau compte</a>
-          </div>
+          
         </div>
         
       </form>
-      <div class="text-footer">
-        
-          <h4>Important :</h4>
-        <p>
-          Veuillez noter que la création d'un compte administrateur nécessite une autorisation formelle du détenteur du statut administratif supérieur. Ces privilèges offrent la possibilité de modifier, ajouter ou supprimer des données.
-        </p>
-    </div>
-
-
-
-
-
 </div>
 </body>
 </html>
