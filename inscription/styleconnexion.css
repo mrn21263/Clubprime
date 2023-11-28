@@ -151,7 +151,7 @@ body {
 }
 
 .bouton-creer-compte a{
-    color: white;
+    color: black;
 }
 
 .text-footer{
@@ -184,4 +184,10 @@ body {
     border-radius: 50px;
     background: #1B1D21;
 
+}
+.bouton-creer-compte-inscription a{
+    color: black;
+}
+.bouton-se-connecter-inscription a{
+    color: white;
 }
