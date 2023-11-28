@@ -89,6 +89,14 @@ body {
     font-size: 15px;
 }
 
+.identifiant #motdepasse{
+    margin-bottom: 21px;
+    border: 0px;
+    background-color: transparent;
+    border-bottom: 2px solid black;
+    width: 60%;
+}
+
 .identifiant #motdepasse::placeholder{
     font-weight: bolder ;
     color: black;
