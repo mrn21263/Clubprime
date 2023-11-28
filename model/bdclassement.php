@@ -1,5 +1,5 @@
 <?php
-include_once "bdconnexion.php";
+include_once 'ymodel/bdconnexion.php';
 
 function getPodiumByAnnee($annee) {
     try {
@@ -19,14 +19,55 @@ function getPodiumByAnnee($annee) {
             ORDER BY top_classement.max_position;
         ");
         $req->bindValue(':annee', $annee, PDO::PARAM_INT);
-
         $req->execute();
 
         $resultat = $req->fetchAll(PDO::FETCH_ASSOC);
     } catch (PDOException $e) {
         print "Erreur !: " . $e->getMessage();
         die();
+    } finally {
+        $cnx = null; 
     }
     return $resultat;
 }
+
+function getClassement($annee) {
+    try {
+        $cnx = connexionPDO();
+        $req = $cnx->prepare("
+            SELECT club.nom, club.id, MAX(logo.photologo)
+            FROM club
+            INNER JOIN logo ON club.id = logo.idClub
+            INNER JOIN classement ON club.id = classement.idClub
+            WHERE classement.annee = :annee
+            GROUP BY club.nom
+            ORDER BY classement.position
+        ");
+        $req->bindParam(':annee', $annee, PDO::PARAM_INT);
+        $req->execute();
+        $resultat = $req->fetchAll(PDO::FETCH_ASSOC);
+        return $resultat;   
+    } catch (PDOException $e) {
+        echo "Erreur : " . $e->getMessage();
+    } finally {
+        $cnx = null; 
+    }
+}
+
+function getEquipeInfo($podium, $position) {
+    try {
+        if (empty($podium) || !isset($podium[$position])) {
+            throw new Exception('ERREUR: Aucun résultat pour cette année ou position invalide');
+        }
+
+        $equipeInfo['nom'] = $podium[$position]['nom'];
+        $equipeInfo['photologo'] = $podium[$position]['photologo'];
+
+    } catch (Exception $e) {
+        echo $e->getMessage();
+    }
+
+    return $equipeInfo;
+}
+
 ?>

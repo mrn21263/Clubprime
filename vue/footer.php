@@ -38,16 +38,16 @@
       <div class="logo"></div>
     </div>
     <div class="middle">
-      <img src="./ressources/LogoEquipe/Chelsea/2005-Actuel.jpg" alt="logo équipe" width="50px">
-      <img src="./ressources/LogoEquipe/ManCity/2016-Actuel.png" alt="logo équipe" width="50px">
-      <img src="./ressources/LogoEquipe/RealMadrid/1997-Actuel.png" alt="logo équipe" width="40px">
-      <img src="./ressources/LogoEquipe/Juventus/2020-Actuel.png" alt="logo équipe" width="50px">
-      <img src="./ressources/LogoEquipe/Bayern/2017-Actuel.png" alt="logo équipe" width="50px">
-      <img src="./ressources/LogoEquipe/Barcelone/2002-Actuel.png" alt="logo équipe" width="50px">
-      <img src="./ressources/LogoEquipe/Roma/2013-2017.png" alt="logo équipe" width="50px">
-      <img src="./ressources/LogoEquipe/PSG/2013-Actuel.png" alt="logo équipe" width="50px">
-      <img src="./ressources/LogoEquipe/Liverpool/2000-Actuel.png" alt="logo équipe" width="40px">
-      <img src="./ressources/LogoEquipe/ManUnited/1998-Actuel.png" alt="logo équipe" width="50px">
+      <img src="./ressources/LogoEquipe/Chelsea/2005Actuel.png" alt="logo équipe" width="50px">
+      <img src="./ressources/LogoEquipe/ManCity/2016.png" alt="logo équipe" width="50px">
+      <img src="./ressources/LogoEquipe/RealMadrid/1997Actuel.png" alt="logo équipe" width="40px">
+      <img src="./ressources/LogoEquipe/Juventus/2020Actuel.png" alt="logo équipe" width="50px">
+      <img src="./ressources/LogoEquipe/Bayern/20022017.png" alt="logo équipe" width="50px">
+      <img src="./ressources/LogoEquipe/Barcelone/2002Actuel.jpg" alt="logo équipe" width="50px">
+      <img src="./ressources/LogoEquipe/Roma/2017Actuel.png" alt="logo équipe" width="50px">
+      <img src="./ressources/LogoEquipe/PSG/2013Actuel.png" alt="logo équipe" width="50px">
+      <img src="./ressources/LogoEquipe/Liverpool/2000.png" alt="logo équipe" width="40px">
+      <img src="./ressources/LogoEquipe/ManUnited/1998Actuel.png" alt="logo équipe" width="50px">
     </div>
     <div class="end">
       <p>© 2023 maroweb. tous les droits sont réservés.</p>
