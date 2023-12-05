@@ -1,9 +1,9 @@
 <?php
-include_once 'ymodel/bdconnexion.php';
+include_once 'ywQmodel/bdconnexion.php';
 
 function getPodiumByAnnee($annee) {
     try {
-        $cnx = connexionPDO();
+        $req = 
         $req = $cnx->prepare("
             SELECT club.nom, MAX(logo.photologo) AS photologo
             FROM club
