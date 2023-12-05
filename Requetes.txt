@@ -13,15 +13,33 @@ Page d'accueil :
     Footer : 
         Select photologo From logo where photologo LIKE '%Actuel%';
 
-select nom from club where id = 1;
 
-select photoLigue from ligue Inner join club ON  club.idLigue = ligue.id where club.id = 1;
-select MAX(photologo) from logo inner join club on logo.idClub = Club.id where club.id=1;
-Select descr from club where id=1;
-select photologo from logo inner join club on logo.idClub = Club.id where club.id=1;
-select photoStade from club where id=1;
-select descrStade from club where id=1;
 
-select photoTrophee,nombre from trophee 
-inner join obtenir on obtenir.idTrophee = trophee.id
-inner join club on obtenir.idClub = club.id;
+Page club : 
+    Nom du club :
+        select nom from club where id = 1;
+    Logo ligue :
+        select photoLigue from ligue Inner join club ON  club.idLigue = ligue.id where club.id = 1;
+    Logo Club : 
+        select MAX(photologo) from logo inner join club on logo.idClub = Club.id where club.id=1;
+    Description club :
+        Select descr from club where id=1;
+    Histirique des logo du club :
+        select photologo from logo inner join club on logo.idClub = Club.id where club.id=1;
+    Photo du stade : 
+        select photoStade from club where id=1;
+    Description du stade :
+        select descrStade from club where id=1;
+    Photo et nombre de trophéee :
+        select photoTrophee,nombre from trophee 
+        inner join obtenir on obtenir.idTrophee = trophee.id
+        inner join club on obtenir.idClub = club.id;
+        where club.id = 1;
+    Photo Capitaine : 
+        Select photoCapitaine from club where club.id = 1;
+    Photo joueurs :
+        select photo,prenom,nom from joueurs
+        inner join club on idClub = club.id
+        where club.id = 1;
+    photo Entraineur :
+        select photoEntraineur from club;
