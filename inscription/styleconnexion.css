@@ -119,18 +119,26 @@ body {
 }
 
 .mdp-oublie{
-    margin-left: 170px;
-    margin-bottom: 15px;
+    margin-left: 220px;
+    margin-bottom: 10px;
     font-size: x-small;
     color: #424242;
-    overflow: hidden;
+    height: 50px;
 }
+
+.mdp-oublie a{
+    transition: 0.3s;
+}
+
 
 .mdp-oublie a:hover{
     text-decoration: underline;
     color: black;
-    font-weight: bolder;
+    transition: 0.3s;
+    font-size: 12px;
+    
 }
+
 
 .bouton{
     height: 150px;
@@ -151,6 +159,26 @@ body {
     background: #1B1D21;
     margin-bottom: 15px;
     font-weight: bolder;
+    cursor: pointer;
+    color: white;
+    transition: 0.3s;
+}
+
+.bouton-se-connecter:hover{
+    transition: 0.3s;
+    background: #D4D4D4;
+    color: black;
+    
+}
+
+.bouton-se-connecter:hover a{
+    color: #000;
+    
+}
+
+.bouton-se-connecter a:hover{
+    transition: 0.3s;
+    
 }
 
 .bouton-se-connecter a{
@@ -166,9 +194,21 @@ body {
     border-radius: 50px;
     background: #D4D4D4;
     font-weight: bolder;
+    cursor: pointer;
+    color: white;
+    transition: 0.3s;
+    color: black;
 }
 
-.bouton-creer-compte a{
+.bouton-creer-compte:hover{
+    transition: 0.3s;
+    background: #1B1D21;
+    color: white;
+
+}
+
+.bouton-creer-compte :hover a{
+    
     color: black;
 }
 

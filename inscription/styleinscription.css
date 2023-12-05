@@ -152,9 +152,17 @@ body {
     font-weight: bolder;
 }
 
+.bouton-se-connecter:hover{
+    transition: 0.3s;
+    background: black;
+    color: white;
+    
+}
+
 .bouton-se-connecter a{
   color: white;
 }
+
 
 .bouton-creer-compte{
     width: 80%;
