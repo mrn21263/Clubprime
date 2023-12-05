@@ -85,6 +85,11 @@ CREATE TABLE IF NOT EXISTS Logo (
    FOREIGN KEY (idClub) REFERENCES Club(id),
    PRIMARY KEY (annee, idClub)
 );
+CREATE TABLE IF NOT EXISTS Utilisateur{
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  identifiant varchar(255), 
+  mdp varchar(255)
+};
 -- Insertion de données dans la table Pays
 INSERT INTO Pays (nom) VALUES
 ('Allemagne'),
