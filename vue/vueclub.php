@@ -39,21 +39,45 @@ $idEquipe = isset($_GET['id']) ? intval($_GET['id']) : 0;
     <?php
     $logos = getLogosanc($idEquipe);
     foreach ($logos as $logo) {
-      echo '<img src="../' . $logo . '" alt="" width="10%">';
+      echo '<div class="lelogo"> <img src="../' . $logo . '" alt="" width="70%"></div>';
     }
     ?>
   </div>
+    </div>
+    <div class="stade">
+      <div class="gauche">
+      <img src="../<?php echo getPhotoStade($idEquipe) ?>" alt="stade de l'equipe">
+      </div>
+      <div class="droite">
+        <h6>Le stade</h6>
+        <p><?php  echo getDescrStade($idEquipe); ?></p>
+      </div>
+    </div>
+    <div class="palmares">
+      <h3>PALMARÈS</h3>
+      <div class="coupes">
+        <?php 
+         $palmares = getPalmares($idEquipe);
+         if (is_array($palmares)) {
+             foreach ($palmares as $trophy) {
+                 $photoTrophee = $trophy['photoTrophee'];
+                 echo '<img src="../' . $photoTrophee . '" alt="Photo du trophée">' . PHP_EOL;
+                }
+         } else {
+             echo "Aucune donnée trouvée.";
+         }
+        ?>
+      </div>
     </div>
 </body>
 </html>
 
 
 <?php
-    //$logos = getLogosanc($idEquipe);
-       // foreach ($logos as $logo) {
-        //    echo $logo;?> <br><?php 
-       // }?><br><?php
-   // echo getPhotoStade($idEquipe);?><br><?php
-   // echo getDescrStade($idEquipe);?><br><?php
-   // echo getPhotoCoach($idEquipe);?><br><?php
-?>
+   echo getPhotoCoach($idEquipe)?><br><?php   
+  
+   ?>
+   
+
+
+   

@@ -118,24 +118,22 @@ function getDescrStade($idEquipe) {
     return $descr;
 }
 
-
-
 function getPalmares($idEquipe) {
-    $Palamares = null;
     try {
-        $resultat = getPhotoNbCoupe($idEquipe);
-        if (!empty($resultat) && isset($resultat['photoTrophee'])) {
-            $Palamares = $resultat['photoTrophee']['nombre'];
+        $resultat = getPhotoCoupe($idEquipe);
+
+        if (!empty($resultat)) {
+            return $resultat; // Retournez directement le résultat
         } else {
             echo "Aucune donnée trouvée.";
+            return array(); // Retournez un tableau vide en cas d'absence de données
         }
     } catch (PDOException $e) {
         echo "Erreur de base de données : " . $e->getMessage();
+        return array(); // Retournez un tableau vide en cas d'erreur
     }
-   
-    return $Palamares;
-   
 }
+
 
 
 function getPhotoCapi($idEquipe) {

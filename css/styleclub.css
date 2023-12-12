@@ -128,7 +128,100 @@
 
   .leslogo{
     width: 100%;
-    height: 70%;
+    height: 80%;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    background-color: rebeccapurple;
   }
 
+  .lelogo{
+    background-color: red;
+    height: 80%;
+    width: 20%;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* --------------Stades-------------- */
+
+  .stade{
+    height: 100svh;
+    width: 100vw;
+    background-color: #000000;
+    display: flex;
+  }
+
+  .stade .gauche{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .stade .gauche img{
+    width: 80%;
+  }
+
+  .stade .droite{
+    height: 100svh;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .stade .droite h6{
+    color: white;
+    font-size: 80px;
+    font-weight: 700;
+    margin-bottom: 5vh;
+  }
+
+  .stade .droite p{
+    color: #FFF;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 144.4%;
+    width: 90%;
+  }
+
+  /* --------------Palmares-------------- */
+
+  .palmares{
+    background-color: #000;
+    height: 50svh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+.palmares h3{
+  color: white;
+  font-size: 69px;
+  font-weight: 700;
+}
+
+  .palmares .coupes{
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+    scroll-behavior: smooth;
+    overflow-x: scroll;
+  }
+  
+
+  .palmares .coupes img{
+    padding-left: 2vw;
+    padding-right: 2vw;
+    height: 70%;
+  }

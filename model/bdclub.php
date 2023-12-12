@@ -124,10 +124,10 @@ function getDescriptionStade($id) {
     return $resultat;
 }
 
-function getPhotoNbCoupe($id) {
+function getPhotoCoupe($id) {
     try {
         $cnx = connexionPDO();
-        $req = $cnx->prepare("SELECT photoTrophee, nombre FROM trophee 
+        $req = $cnx->prepare("SELECT photoTrophee FROM trophee 
         INNER JOIN obtenir ON obtenir.idTrophee = trophee.id
         INNER JOIN club ON obtenir.idClub = club.id
         WHERE club.id = :id");
