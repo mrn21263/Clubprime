@@ -140,34 +140,9 @@ body {
     justify-content: center;
     flex-direction: column;
     font-weight: bolder;
-    
 }
 
-.bouton-se-connecter{
-    width: 80%;
-    height: 5vh;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50px;
-    background: #1B1D21;
-    margin-bottom: 15px;
-    font-weight: bolder;
-}
-
-.bouton-se-connecter:hover{
-    transition: 0.3s;
-    background: black;
-    color: white;
-    
-}
-
-.bouton-se-connecter a{
-  color: white;
-}
-
-
-.bouton-creer-compte{
+.bouton-se-connecter-inscription{
     width: 80%;
     height: 5vh;
     display: inline-flex;
@@ -175,23 +150,21 @@ body {
     align-items: center;
     border-radius: 50px;
     background: #D4D4D4;
-    font-weight: bolder;
-}
-
-.bouton-creer-compte a{
+    margin-bottom: 15px;
+    font-weight: 800;
+    cursor: pointer;
     color: black;
+    transition: 0.3s;
 }
 
-.text-footer{
-    margin-top: 27px;
-    margin-left: 80px;
-    margin-right: 80px;
-    font-size: small;
-    display: flex;
-    justify-items: center;
-    flex-direction: column;
-    font-size: 10px;
+.bouton-se-connecter-inscription:hover{
+    transition: 0.3s;
+    background: #1B1D21;
+    color: white;
+    
 }
+
+
 
 .bouton-creer-compte-inscription{
     width: 80%;
@@ -201,24 +174,78 @@ body {
     align-items: center;
     border-radius: 50px;
     background: #1B1D21;
-    margin-bottom: 15px;
-}
-.bouton-se-connecter-inscription{
-    width: 80%;
-    height: 5vh;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50px;
-    background: #D4D4D4;
-    
-
-}
-.bouton-creer-compte-inscription a{
     color: white;
-    font-weight: bolder;
+    font-weight: 800;
+    margin-bottom: 15px;
+    transition: 0.3s;
 }
-.bouton-se-connecter-inscription a{
+
+.bouton-creer-compte-inscription:hover{
+    transition: 0.3s;
+    background: #D4D4D4;
     color: black;
-    font-weight: bolder;
 }
+
+.text-footer{
+    margin-top: 10px;
+    margin-left: 80px;
+    margin-right: 80px;
+    font-size: small;
+    display: flex;
+    justify-items: center;
+    flex-direction: column;
+    font-size: 10px;
+}
+
+@media screen and (max-width: 475px) {
+    .login-container{
+        width: 380px;
+    }
+
+    .text-footer{
+        margin-top: 15px;
+        margin-left: 40px;
+        margin-right: 40px;
+        font-size: small;
+        display: flex;
+        justify-items: center;
+        flex-direction: column;
+        font-size: 10px;
+    }
+  }
+
+@media screen and (max-width: 390px) {
+    .login-container{
+        width: 320px;
+    }
+
+    .text-footer{
+        margin-top: 15px;
+        margin-left: 40px;
+        margin-right: 40px;
+        font-size: small;
+        display: flex;
+        justify-items: center;
+        flex-direction: column;
+        font-size: 10px;
+    }
+  }
+
+  @media screen and (max-width: 330px) {
+    .login-container{
+        width: 280px;
+    }
+
+    .text-footer{
+        margin-top: 12px;
+        margin-left: 30px;
+        margin-right: 30px;
+        font-size: 9px;
+    }
+
+    .mdp-oublie{
+        margin-left: 200px;
+        margin-bottom: 8px;
+        height: 45px;
+    }
+  }
