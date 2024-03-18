@@ -18,22 +18,22 @@ function getNomClubController($idEquipe) {
     return $nomClub;
 }
 
-function getPhotoLigue($idEquipe) {
-    try {
-        $resultat = getLigue($idEquipe);
 
-        if (!empty($resultat)) {
-            $photoLigue = $resultat['photoLigue'];
+function getPhotoLigueEquipe($idEquipe) {
+    try {
+        $photoLigue = getPhotoLigueByEquipe($idEquipe);
+
+        if (!empty($photoLigue)) {
+            return $photoLigue;
         } else {
-            echo "Aucune donnée trouvée.";
+            echo "Aucune photo de ligue trouvée pour cette équipe.";
         }
     } catch (PDOException $e) {
-
         echo "Erreur de base de données : " . $e->getMessage();
     }
-
-    return $photoLigue;
 }
+
+
 
 function getLogoEquipe($idEquipe) {
     try {
@@ -63,26 +63,6 @@ function getDescription($idEquipe) {
     }
 
     return $descr;
-}
-
-
-function getLogosanc($idEquipe) {
-    try {
-        $resultat = getLogosAncien($idEquipe);
-        $photos = array(); 
-
-        if (!empty($resultat)) {
-            foreach ($resultat as $row) {
-                $photos[] = $row['photologo']; 
-            }
-        } else {
-            echo "Aucune donnée trouvée.";
-        }
-    } catch (PDOException $e) {
-        echo "Erreur de base de données : " . $e->getMessage();
-    }
-
-    return $photos; 
 }
 
 
@@ -118,58 +98,6 @@ function getDescrStade($idEquipe) {
     return $descr;
 }
 
-function getPalmares($idEquipe) {
-    try {
-        $resultat = getPhotoCoupe($idEquipe);
-
-        if (!empty($resultat)) {
-            return $resultat; // Retournez directement le résultat
-        } else {
-            echo "Aucune donnée trouvée.";
-            return array(); // Retournez un tableau vide en cas d'absence de données
-        }
-    } catch (PDOException $e) {
-        echo "Erreur de base de données : " . $e->getMessage();
-        return array(); // Retournez un tableau vide en cas d'erreur
-    }
-}
-
-
-
-function getPhotoCapi($idEquipe) {
-    try {
-        $resultat = getPhotoCapitaine($idEquipe);
-
-        if (!empty($resultat)) {
-            $photoCapitaine = $resultat['photoCapitaine'];
-        } else {
-            echo "Aucune donnée trouvée.";
-        }
-    } catch (PDOException $e) {
-
-        echo "Erreur de base de données : " . $e->getMessage();
-    }
-
-    return $photoCapitaine;
-}
-
-
-function getPhotoCoach($idEquipe) {
-    try {
-        $resultat = getPhotoEntraineur($idEquipe);
-
-        if (!empty($resultat)) {
-            $photoEntraineur = $resultat['photoEntraineur'];
-        } else {
-            echo "Aucune donnée trouvée.";
-        }
-    } catch (PDOException $e) {
-
-        echo "Erreur de base de données : " . $e->getMessage();
-    }
-
-    return $photoEntraineur;
-}
 
 
 
