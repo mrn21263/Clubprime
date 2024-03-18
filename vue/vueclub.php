@@ -46,6 +46,7 @@ if ($idEquipe > 0) {
     <script src="../js/script.js"></script>
 </head>
 
+
 <body>
 
 <div class="navbarclubprime">
